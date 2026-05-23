@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EG184 — Mechanical Properties of Materials Study Site</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="#" class="nav-brand" onclick="showSection('home', event)">
+      <div class="nav-logo" style="background:linear-gradient(135deg,#f76aa3,#c06af7)">MP</div>
+      <span>EG184</span>
+    </a>
+    <a href="https://ayquresh23.github.io" class="nav-hub-link">← All Modules</a>
+    <div class="nav-tabs">
+      <button class="nav-tab active" data-section="home" onclick="showSection('home', event)">Home</button>
+      <button class="nav-tab" data-section="t1" onclick="showSection('t1', event)">T1 Stress &amp; Strain</button>
+      <button class="nav-tab" data-section="t2" onclick="showSection('t2', event)">T2 Deformation</button>
+      <button class="nav-tab" data-section="t3" onclick="showSection('t3', event)">T3 Dislocations</button>
+      <button class="nav-tab" data-section="t4" onclick="showSection('t4', event)">T4 Strengthening</button>
+      <button class="nav-tab" data-section="t5" onclick="showSection('t5', event)">T5 Fracture</button>
+      <button class="nav-tab" data-section="t6" onclick="showSection('t6', event)">T6 Fatigue</button>
+      <button class="nav-tab" data-section="t7" onclick="showSection('t7', event)">T7 Creep &amp; SCC</button>
+      <button class="nav-tab" data-section="revision" onclick="showSection('revision', event)">Revision</button>
+      <button class="nav-tab" data-section="problems" onclick="showSection('problems', event)">Problems</button>
+      <button class="nav-tab" data-section="formulas" onclick="showSection('formulas', event)">Formulas</button>
+      <button class="nav-tab" data-section="glossary" onclick="showSection('glossary', event)">Glossary</button>
+      <button class="nav-tab" data-section="traps" onclick="showSection('traps', event)">Traps</button>
+      <a href="definitions.html" class="nav-tab" style="text-decoration:none">Definitions ↗</a>
+    </div>
+    <div class="nav-mode">
+      <button class="mode-btn active" data-mode="learn" onclick="setMode('learn')">Learn</button>
+      <button class="mode-btn" data-mode="revise" onclick="setMode('revise')">Revise</button>
+      <button class="mode-btn" title="Flashcards" onclick="showSection('glossary');setTimeout(()=>enterFlashcards(),200)" style="font-size:14px;padding:5px 8px">📇</button>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<!-- HOME -->
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section id="home" class="section active">
+  <div class="container">
+    <div class="hero">
+      <span class="hero-tag">Mechanical Properties of Materials — Swansea University</span>
+      <h1>EG184 Study Site</h1>
+      <p class="hero-subtitle">Complete revision resource covering stress &amp; strain, dislocations, strengthening, fracture, fatigue, and creep — from first principles to exam-ready.</p>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="hero-stat-value">7</div><div class="hero-stat-label">Topics</div></div>
+        <div class="hero-stat"><div class="hero-stat-value">160+</div><div class="hero-stat-label">Terms</div></div>
+        <div class="hero-stat"><div class="hero-stat-value">40+</div><div class="hero-stat-label">Formulas</div></div>
+        <div class="hero-stat"><div class="hero-stat-value">80+</div><div class="hero-stat-label">Exam Traps</div></div>
+      </div>
+    </div>
+
+    <h2>Pick a topic</h2>
+    <div class="progress-row">
+      <span class="progress-label" style="flex-shrink:0">0 of 7 topics visited</span>
+      <div class="progress-track"><div class="progress-fill"></div></div>
+    </div>
+    <div class="card-grid">
+      <div class="topic-card" onclick="showSection('t1')" style="--bar-color:#f7a84a">
+        <div class="topic-num">Topic 1</div>
+        <div class="topic-title">Stress &amp; Strain</div>
+        <div class="topic-desc">Engineering stress/strain, Hooke's Law, yield strength, UTS, 0.2% proof stress, Poisson's ratio, Young's modulus, toughness, hardness. The tensile test in full.</div>
+        <div class="topic-meta">
+          <div class="topic-meta-item">Difficulty: <span>Medium</span></div>
+          <div class="topic-meta-item">Read: <span>25 min</span></div>
+        </div>
+      </div>
+      <div class="topic-card" onclick="showSection('t2')" style="--bar-color:#6aabf7">
+        <div class="topic-num">Topic 2</div>
+        <div class="topic-title">Deformation Processes in Crystals</div>
+        <div class="topic-desc">Crystal structures (BCC, FCC, HCP), slip planes and directions, resolved shear stress, Schmid's Law, why experimental CRSS is 10,000× below theory.</div>
+        <div class="topic-meta">
+          <div class="topic-meta-item">Difficulty: <span>Hard</span></div>
+          <div class="topic-meta-item">Read: <span>30 min</span></div>
+        </div>
+      </div>
+      <div class="topic-card" onclick="showSection('t3')" style="--bar-color:#7af76a">
+        <div class="topic-num">Topic 3</div>
+        <div class="topic-title">Dislocations &amp; Work Hardening</div>
+        <div class="topic-desc">Edge, screw, mixed and loop dislocations; Burgers vector; Frank-Read sources; cross-slip; climb; Hall-Petch grain size strengthening.</div>
+        <div class="topic-meta">
+          <div class="topic-meta-item">Difficulty: <span>Hard</span></div>
+          <div class="topic-meta-item">Read: <span>40 min</span></div>
+        </div>
+      </div>
+      <div class="topic-card" onclick="showSection('t4')" style="--bar-color:#c06af7">
+        <div class="topic-num">Topic 4</div>
+        <div class="topic-title">Strengthening &amp; Annealing</div>
+        <div class="topic-desc">Solid solution, precipitation/age hardening, Orowan looping, cold work. Recovery, recrystallisation, grain growth. Under-aged, peak-aged, over-aged.</div>
+        <div class="topic-meta">
+          <div class="topic-meta-item">Difficulty: <span>Hard</span></div>
+          <div class="topic-meta-item">Read: <span>40 min</span></div>
+        </div>
+      </div>
+      <div class="topic-card" onclick="showSection('t5')" style="--bar-color:#4af7c0">
+        <div class="topic-num">Topic 5</div>
+        <div class="topic-title">Fracture &amp; Fracture Mechanics</div>
+        <div class="topic-desc">Ductile vs brittle fracture, Charpy test, ductile-to-brittle transition, Griffith criterion, stress intensity factor K_IC, critical crack length. De Havilland Comet case study.</div>
+        <div class="topic-meta">
+          <div class="topic-meta-item">Difficulty: <span>Hard</span></div>
+          <div class="topic-meta-item">Read: <span>35 min</span></div>
+        </div>
+      </div>
+      <div class="topic-card" onclick="showSection('t6')" style="--bar-color:#f76c8a">
+        <div class="topic-num">Topic 6</div>
+        <div class="topic-title">Fatigue</div>
+        <div class="topic-desc">S-N curves, R-ratio, stress amplitude, Stage I/II crack growth, striations vs beachmarks, Paris Law, fatigue limit, shot peening, Goodman criterion.</div>
+        <div class="topic-meta">
+          <div class="topic-meta-item">Difficulty: <span>Medium</span></div>
+          <div class="topic-meta-item">Read: <span>35 min</span></div>
+        </div>
+      </div>
+      <div class="topic-card" onclick="showSection('t7')" style="--bar-color:#f7d54a">
+        <div class="topic-num">Topic 7</div>
+        <div class="topic-title">Creep &amp; Stress Corrosion Cracking</div>
+        <div class="topic-desc">Three creep stages, Norton's Power Law, Arrhenius activation energy, Nabarro-Herring vs Coble vs dislocation creep. SCC conditions, pitting, hydrogen embrittlement.</div>
+        <div class="topic-meta">
+          <div class="topic-meta-item">Difficulty: <span>Hard</span></div>
+          <div class="topic-meta-item">Read: <span>40 min</span></div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Quick reference</h2>
+    <div class="card-grid">
+      <div class="topic-card" onclick="showSection('formulas')" style="--bar-color:#f7a84a">
+        <div class="topic-num">Reference</div>
+        <div class="topic-title">📐 Formula Sheet</div>
+        <div class="topic-desc">Every equation in the module. Variables defined, units flagged, worked examples linked.</div>
+      </div>
+      <div class="topic-card" onclick="showSection('glossary')" style="--bar-color:#4af7c0">
+        <div class="topic-num">Reference</div>
+        <div class="topic-title">📚 Glossary</div>
+        <div class="topic-desc">160+ terms across all 7 topics. Instant search, topic filter, and flashcard mode.</div>
+      </div>
+      <div class="topic-card" onclick="showSection('traps')" style="--bar-color:#f76c8a">
+        <div class="topic-num">Reference</div>
+        <div class="topic-title">⚠️ MCQ Traps</div>
+        <div class="topic-desc">80+ plausible-but-wrong claims the exam uses. Know what's actually true.</div>
+      </div>
+    </div>
+
+    <h2 class="learn-only">How to use this site</h2>
+    <div class="two-col learn-only">
+      <div class="concept-box note">
+        <div class="concept-box-title">📖 Learn Mode</div>
+        <p>Read each topic from start to finish. First-principles explanations build up to exam-level detail. Analogies and context included.</p>
+      </div>
+      <div class="concept-box tip">
+        <div class="concept-box-title">⚡ Revise Mode</div>
+        <p>Strips introductory text and shows only exam-critical content — formulas, key definitions, worked examples, trap warnings.</p>
+      </div>
+    </div>
+    <div class="concept-box success learn-only">
+      <div class="concept-box-title">⌨ Keyboard shortcuts</div>
+      <p>Press <strong>/</strong> to jump to Glossary search. Use <strong>→ / ←</strong> arrow keys to navigate between topics. Press <strong>Esc</strong> to clear search. In flashcards: Space/Enter to flip, arrows to navigate.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<!-- TOPIC 1 — STRESS & STRAIN -->
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section id="t1" class="section">
+  <div class="container">
+    <div class="topic-num">Topic 1 of 7</div>
+    <h1>Stress &amp; Strain</h1>
+    <p class="hero-subtitle learn-only">The tensile test is the foundation of mechanical testing. Before you can understand any other topic in this module you need to be able to read a stress–strain curve and know what every feature on it means.</p>
+
+    <div class="toc">
+      <div class="toc-title">In this topic</div>
+      <ul class="toc-list">
+        <li><a href="#t1-test" class="toc-link">→ The tensile test</a></li>
+        <li><a href="#t1-stress" class="toc-link">→ Engineering stress &amp; strain</a></li>
+        <li><a href="#t1-curve" class="toc-link">→ Features of the stress–strain curve</a></li>
+        <li><a href="#t1-elastic" class="toc-link">→ Young's modulus &amp; Poisson's ratio</a></li>
+        <li><a href="#t1-hardness" class="toc-link">→ Hardness</a></li>
+      </ul>
+    </div>
+
+    <h2 id="t1-test">The Tensile Test</h2>
+    <p class="learn-only">A cylindrical specimen with a narrow gauge section is pulled at constant displacement rate. A <strong>load cell</strong> measures force; an <strong>extensometer</strong> measures gauge-length change. From these two raw signals we derive engineering stress and strain — quantities that describe the material, not the geometry.</p>
+    <div class="concept-box note">
+      <div class="concept-box-title">Why stress &amp; strain, not force &amp; displacement?</div>
+      <p>A thicker bar carries more load before yielding — but the material's yield strength is the same. Dividing by area (→ stress) and original length (→ strain) removes the geometry and gives properties of the <em>material itself</em>. That's why a stress–strain curve can be used across different specimen sizes.</p>
+    </div>
+
+    <h2 id="t1-stress">Engineering Stress &amp; Strain</h2>
+    <div class="formula-block">
+      <div class="formula-name">Engineering stress</div>
+      <div class="formula-eq">$$\sigma = \frac{F}{A_0}$$</div>
+      <div class="formula-vars">
+        <div class="formula-var"><span class="formula-var-symbol">F</span>applied force (N)</div>
+        <div class="formula-var"><span class="formula-var-symbol">A₀</span>original cross-sectional area (m² or mm²)</div>
+        <div class="formula-var"><span class="formula-var-symbol">σ</span>engineering stress (Pa or MPa)</div>
+      </div>
+    </div>
+    <div class="formula-block">
+      <div class="formula-name">Engineering strain</div>
+      <div class="formula-eq">$$\varepsilon = \frac{l_i - l_0}{l_0}$$</div>
+      <div class="formula-vars">
+        <div class="formula-var"><span class="formula-var-symbol">l₀</span>original gauge length</div>
+        <div class="formula-var"><span class="formula-var-symbol">lᵢ</span>instantaneous length under load</div>
+        <div class="formula-var"><span class="formula-var-symbol">ε</span>engineering strain (dimensionless)</div>
+      </div>
+    </div>
+
+    <h2 id="t1-curve">Features of the Stress–Strain Curve</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h4 style="color:#f7a84a">Elastic region (linear)</h4>
+        <p>Slope = Young's modulus E. Deformation fully recoverable. Governed by Hooke's Law: σ = Eε.</p>
+      </div>
+      <div class="card">
+        <h4 style="color:#f7a84a">Yield point / 0.2% proof stress</h4>
+        <p>Start of permanent deformation. For materials without a sharp yield point, use the 0.2% offset — draw a line parallel to the elastic region from ε = 0.002.</p>
+      </div>
+      <div class="card">
+        <h4 style="color:#f7a84a">Strain hardening region</h4>
+        <p>Between yield and UTS. Dislocation density increases — material gets stronger as it deforms. Slope decreases toward UTS.</p>
+      </div>
+      <div class="card">
+        <h4 style="color:#f7a84a">UTS (peak)</div>
+        <p>Maximum engineering stress. Onset of necking. Engineering stress drops after this because A decreases faster than F.</p>
+      </div>
+      <div class="card">
+        <h4 style="color:#f7a84a">Fracture point</h4>
+        <p>Final separation. Engineering stress at fracture < UTS due to necking. True stress at fracture is still rising.</p>
+      </div>
+    </div>
+
+    <div class="example">
+      <div class="example-label">Worked example — reading a stress–strain curve</div>
+      <p class="example-q">Cylindrical specimen: gauge length 65 mm, diameter 10 mm. Test data gives UTS = 572 MPa, the 0.2% line intersects the curve at 265 MPa, and the specimen fractures at ε = 0.30 with elastic springback ε_e = 0.04.</p>
+      <div class="example-step">A₀ = π(0.01)²/4 = 7.85 × 10⁻⁵ m²</div>
+      <div class="example-step">0.2% proof stress = 265 MPa (where ε = 0.002 offset line meets curve)</div>
+      <div class="example-step">UTS = 572 MPa (peak of curve)</div>
+      <div class="example-step">Plastic strain to failure = total strain − elastic springback = 0.30 − 0.04 = 0.26</div>
+      <div class="example-answer">E = slope of elastic region = σ/ε in the linear zone. Toughness = area under entire curve (J/m³).</div>
+    </div>
+
+    <h2 id="t1-elastic">Young's Modulus &amp; Poisson's Ratio</h2>
+    <div class="formula-block">
+      <div class="formula-name">Hooke's Law</div>
+      <div class="formula-eq">$$\sigma = E\varepsilon \quad \text{(elastic regime only)}$$</div>
+      <div class="formula-vars">
+        <div class="formula-var"><span class="formula-var-symbol">E</span>Young's (elastic) modulus (GPa) — slope of linear elastic region</div>
+      </div>
+    </div>
+    <div class="formula-block">
+      <div class="formula-name">Poisson's ratio</div>
+      <div class="formula-eq">$$\nu = -\frac{\varepsilon_x}{\varepsilon_z} \approx 0.3 \text{ for metals}$$</div>
+      <div class="formula-vars">
+        <div class="formula-var"><span class="formula-var-symbol">ε_x</span>lateral (transverse) strain — compressive under tensile axial load</div>
+        <div class="formula-var"><span class="formula-var-symbol">ε_z</span>axial strain — along load direction</div>
+      </div>
+    </div>
+
+    <div class="example">
+      <div class="example-label">Worked example — Poisson's ratio</div>
+      <p class="example-q">Cylinder: d₀ = 10 mm. Under tensile load, diameter decreases by Δd = −2.5×10⁻³ mm. ν = 0.3. Find axial strain.</p>
+      <div class="example-step">ε_x = Δd/d₀ = −2.5×10⁻³/10 = −2.5×10⁻⁴</div>
+      <div class="example-step">ε_z = −ε_x/ν = −(−2.5×10⁻⁴)/0.3</div>
+      <div class="example-answer">ε_z = 8.3×10⁻⁴ (tensile, as expected)</div>
+    </div>
+
+    <h2 id="t1-hardness">Hardness</h2>
+    <p>Hardness measures resistance to localised plastic deformation (penetration). The Vickers test uses a square-based pyramidal diamond indenter (136° included angle). The diagonal of the resulting impression is measured.</p>
+    <div class="formula-block">
+      <div class="formula-name">Hardness rule of thumb</div>
+      <div class="formula-eq">$$\sigma_y \approx \frac{H}{3}$$</div>
+      <p style="margin-top:10px">Hardness H in MPa, yield strength σ_y in MPa. Useful for quick estimates where a full tensile test is not possible.</p>
+    </div>
+
+    <h2>Topic 1 essentials</h2>
+    <div class="concept-box">
+      <div class="concept-box-title revise-only">EXAM CHEAT SHEET</div>
+      <div class="concept-box-title learn-only">Quick recap</div>
+      <ul>
+        <li>σ = F/A₀ (original area); ε = (lᵢ − l₀)/l₀ (dimensionless)</li>
+        <li>Hooke's Law: σ = Eε (elastic region only)</li>
+        <li>0.2% proof stress: offset ε = 0.002, parallel to elastic slope</li>
+        <li>UTS ≠ fracture stress — engineering stress drops after UTS due to necking</li>
+        <li>Plastic strain = total strain − elastic springback</li>
+        <li>Poisson's ratio ν ≈ 0.3 for metals; ε_x = −νε_z</li>
+        <li>Toughness = area under full stress–strain curve (J/m³)</li>
+        <li>Convert kN→N and mm→m BEFORE calculating stress/strain</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<!-- TOPIC 2 — DEFORMATION PROCESSES IN CRYSTALS -->
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section id="t2" class="section">
+  <div class="container">
+    <div class="topic-num">Topic 2 of 7</div>
+    <h1>Deformation Processes in Crystals</h1>
+    <p class="hero-subtitle learn-only">Metals are crystalline. Their plastic deformation doesn't happen by simultaneous shear of entire planes — it happens by slip, driven by dislocations moving along specific planes in specific directions. This topic explains why, and gives you the tools to calculate when slip starts.</p>
+
+    <div class="toc">
+      <div class="toc-title">In this topic</div>
+      <ul class="toc-list">
+        <li><a href="#t2-crystal" class="toc-link">→ Crystal structures &amp; slip systems</a></li>
+        <li><a href="#t2-schmid" class="toc-link">→ Resolved shear stress &amp; Schmid's Law</a></li>
+        <li><a href="#t2-theory" class="toc-link">→ Theoretical vs experimental strength</a></li>
+      </ul>
+    </div>
+
+    <h2 id="t2-crystal">Crystal Structures &amp; Slip Systems</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Structure</th><th>Slip plane</th><th>Slip direction</th><th>No. of systems</th><th>Ductility</th></tr></thead>
+        <tbody>
+          <tr><td><strong>FCC</strong> (Al, Cu, Ni, Au)</td><td>{111}</td><td>⟨110⟩</td><td>12 (4 planes × 3 dir.)</td><td>High</td></tr>
+          <tr><td><strong>BCC</strong> (Fe, W, Mo)</td><td>{110}</td><td>⟨111⟩</td><td>12</td><td>Medium</td></tr>
+          <tr><td><strong>HCP</strong> (Ti, Mg, Zn)</td><td>{001}</td><td>⟨100⟩</td><td>3 primary</td><td>Low</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="concept-box note learn-only">
+      <div class="concept-box-title">Why are slip planes and directions the densest ones?</div>
+      <p>Densely packed planes have the largest inter-planar spacing → weakest bonding between planes → easiest to shear. Densely packed directions have the shortest repeat distance → smallest Burgers vector → lowest energy for dislocation motion.</p>
+    </div>
+
+    <h2 id="t2-schmid">Resolved Shear Stress &amp; Schmid's Law</h2>
+    <p class="learn-only">Even if you pull a crystal in pure tension, the force creates a shear component on inclined slip planes. That shear component is what actually drives slip.</p>
+    <div class="formula-block">
+      <div class="formula-name">Resolved shear stress (3D Schmid)</div>
+      <div class="formula-eq">$$\tau_{RSS} = \sigma \cos\lambda \cos\phi = \sigma m$$</div>
+      <div class="formula-vars">
+        <div class="formula-var"><span class="formula-var-symbol">λ</span>angle between tensile axis and slip DIRECTION</div>
+        <div class="formula-var"><span class="formula-var-symbol">φ</span>angle between tensile axis and slip plane NORMAL</div>
+        <div class="formula-var"><span class="formula-var-symbol">m</span>Schmid factor = cosλ cosφ. Maximum 0.5 at λ = φ = 45°</div>
+      </div>
+    </div>
+    <div class="formula-block">
+      <div class="formula-name">Yield stress from Schmid's Law</div>
+      <div class="formula-eq">$$\sigma_y = \frac{\tau_{CRSS}}{\cos\lambda \cos\phi} = \frac{\tau_{CRSS}}{m}$$</div>
+      <p style="margin-top:10px">Slip initiates on the system with the highest Schmid factor m (primary slip system). Slip starts when τ_RSS reaches τ_CRSS.</p>
+    </div>
+
+    <div class="example">
+      <div class="example-label">Derivation — resolved shear stress from first principles</div>
+      <p class="example-q">Force F applied axially to a crystal. Find the shear stress on a slip plane whose normal makes angle φ with the tensile axis, in a slip direction making angle λ with the tensile axis.</p>
+      <div class="example-step">Component of force along slip direction: F cosλ</div>
+      <div class="example-step">Area of the slip plane: A₀/cosφ (the inclined area is larger than the cross-section)</div>
+      <div class="example-step">τ_RSS = (F cosλ)/(A₀/cosφ) = (F/A₀) cosλ cosφ</div>
+      <div class="example-answer">τ_RSS = σ cosλ cosφ = σm. Yield when τ_RSS = τ_CRSS → σ_y = τ_CRSS/m</div>
+    </div>
+
+    <h2 id="t2-theory">Theoretical vs Experimental Strength</h2>
+    <p>If plastic deformation required all atoms in a plane to move simultaneously, the required stress would be enormous:</p>
+    <div class="formula-block">
+      <div class="formula-name">Theoretical maximum shear stress</div>
+      <div class="formula-eq">$$\tau_{max} \approx \frac{G}{2\pi}$$</div>
+      <p style="margin-top:10px">This gives ~3–30 GPa for metals. Experimental CRSS is only 0.5–10 MPa — a discrepancy of <strong>10³–10⁴×</strong>. This proves that dislocations must exist and that they enable slip at much lower stresses.</p>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Metal</th><th>G/2π (GPa)</th><th>Experimental CRSS (MPa)</th><th>Ratio</th></tr></thead>
+        <tbody>
+          <tr><td>Al</td><td>11.3</td><td>0.78</td><td>~10⁴</td></tr>
+          <tr><td>Cu</td><td>20</td><td>0.5</td><td>~4×10⁴</td></tr>
+          <tr><td>Ti</td><td>17</td><td>14</td><td>~10³</td></tr>
+          <tr><td>Ni</td><td>32</td><td>5</td><td>~6×10³</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Topic 2 essentials</h2>
+    <div class="concept-box">
+      <div class="concept-box-title revise-only">EXAM CHEAT SHEET</div>
+      <div class="concept-box-title learn-only">Quick recap</div>
+      <ul>
+        <li>FCC slip: {111}⟨110⟩, 12 systems; BCC: {110}⟨111⟩, 12 systems; HCP: 3 primary systems</li>
+        <li>RSS = σ cosλ cosφ = σm (λ to slip direction; φ to slip plane NORMAL)</li>
+        <li>Schmid factor max = 0.5 (not 1.0). τ_max = σ/2</li>
+        <li>Slip when τ_RSS ≥ τ_CRSS. Primary slip system = highest m</li>
+        <li>φ is to plane NORMAL, not the plane itself — most common exam mix-up</li>
+        <li>Theoretical G/2π >> experimental CRSS by 10³–10⁴×: proof dislocations exist</li>
+        <li>RSS = 0 when either λ = 90° (force ⊥ slip direction) or φ = 90° (force in slip plane)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<!-- TOPIC 3 — DISLOCATIONS & WORK HARDENING -->
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section id="t3" class="section">
+  <div class="container">
+    <div class="topic-num">Topic 3 of 7</div>
+    <h1>Dislocations &amp; Work Hardening</h1>
+    <p class="hero-subtitle learn-only">Dislocations are the key to understanding why metals are ductile, why cold working strengthens them, and why grain boundaries resist slip. Everything in this topic comes back to one idea: moving a single row of atoms at a time takes far less energy than moving a whole plane simultaneously.</p>
+
+    <div class="toc">
+      <div class="toc-title">In this topic</div>
+      <ul class="toc-list">
+        <li><a href="#t3-types" class="toc-link">→ Four dislocation types</a></li>
+        <li><a href="#t3-burgers" class="toc-link">→ Burgers vector</a></li>
+        <li><a href="#t3-frank" class="toc-link">→ Frank-Read sources</a></li>
+        <li><a href="#t3-motion" class="toc-link">→ Dislocation motion: cross-slip &amp; climb</a></li>
+        <li><a href="#t3-hardening" class="toc-link">→ Work hardening &amp; Hall-Petch</a></li>
+      </ul>
+    </div>
+
+    <h2 id="t3-types">Four Dislocation Types</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h4 style="color:#7af76a">Edge dislocation</h4>
+        <p><strong>b ⊥ dislocation line.</strong> Extra half-plane of atoms inserted. Moves parallel to b under shear stress. Symbol: ⊥ (positive), ⊤ (negative).</p>
+      </div>
+      <div class="card">
+        <h4 style="color:#7af76a">Screw dislocation</h4>
+        <p><strong>b ∥ dislocation line.</strong> No extra half-plane; atomic planes spiral helically. Moves perpendicular to shear stress direction. Can cross-slip. Symbol: ⊙ (RHS), ⊗ (LHS).</p>
+      </div>
+      <div class="card">
+        <h4 style="color:#7af76a">Mixed dislocation</h4>
+        <p><strong>b inclined to line.</strong> Resolves into edge component b_e = b sinθ and screw component b_s = b cosθ. Most dislocations in real crystals are mixed.</p>
+      </div>
+      <div class="card">
+        <h4 style="color:#7af76a">Dislocation loop</h4>
+        <p>Closed loop with constant b. Opposite sides have opposite polarity (one edge +, one edge −). Cannot end inside a crystal — must close on itself, reach a surface, or end at a node.</p>
+      </div>
+    </div>
+
+    <h2 id="t3-burgers">Burgers Vector</h2>
+    <p>The Burgers vector <strong>b</strong> defines the direction and magnitude of atomic displacement associated with a dislocation. Determined by a Burgers circuit: draw a closed loop around the dislocation using the right-hand screw (RHS) convention. The closure failure vector is b.</p>
+    <div class="formula-block">
+      <div class="formula-name">Strain energy (per unit length)</div>
+      <div class="formula-eq">$$U_{screw} = Gb^2 \quad;\quad U_{edge} = \frac{Gb^2}{1-\nu}$$</div>
+      <p style="margin-top:8px">Edge dislocations have higher energy than screw by factor 1/(1−ν). Dislocation loops are therefore elliptical, not circular.</p>
+    </div>
+    <div class="formula-block">
+      <div class="formula-name">Force per unit length on a dislocation</div>
+      <div class="formula-eq">$$F = \tau b$$</div>
+    </div>
+
+    <h2 id="t3-frank">Frank-Read Sources</h2>
+    <p class="learn-only">How does dislocation density increase from ~10¹⁰ to ~10¹⁶ m⁻² during cold work? Frank-Read sources are the answer — they continuously regenerate new dislocation loops from a single pinned segment.</p>
+    <div class="concept-box note">
+      <div class="concept-box-title">Frank-Read mechanism</div>
+      <ol>
+        <li>A dislocation segment is pinned at two points (by impurities, nodes, or forest dislocations), length <em>l</em></li>
+        <li>Applied shear stress causes it to bow outward</li>
+        <li>It expands, wraps around, and the two arms meet and annihilate (opposite polarity)</li>
+        <li>A complete dislocation loop is emitted; the original segment reforms</li>
+        <li>Process repeats — one source can produce thousands of loops</li>
+      </ol>
+    </div>
+    <div class="formula-block">
+      <div class="formula-name">Frank-Read critical stress</div>
+      <div class="formula-eq">$$\tau_{FR} = \frac{Gb}{l}$$</div>
+      <div class="formula-vars">
+        <div class="formula-var"><span class="formula-var-symbol">l</span>length of the PINNED SEGMENT (not grain diameter)</div>
+        <div class="formula-var"><span class="formula-var-symbol">G</span>shear modulus; <span class="formula-var-symbol">b</span>Burgers vector magnitude</div>
+      </div>
+    </div>
+
+    <h2 id="t3-motion">Dislocation Motion: Cross-Slip &amp; Climb</h2>
+    <div class="two-col">
+      <div class="concept-box success">
+        <div class="concept-box-title">Cross-slip (screw dislocations only)</div>
+        <p>A screw dislocation changes from one slip plane to another that also contains its Burgers vector. Allows bypass of obstacles. <strong>Cannot happen for edge dislocations</strong> — their line and b together uniquely define one slip plane.</p>
+      </div>
+      <div class="concept-box warn">
+        <div class="concept-box-title">Dislocation climb (edge dislocations only, T &gt; 0.4T_m)</div>
+        <p>An edge dislocation moves perpendicular to its slip plane by absorbing or emitting vacancies. <strong>Non-conservative</strong> (changes dislocation density). Thermally activated — requires T &gt; 0.4T_m. Enables creep.</p>
+      </div>
+    </div>
+
+    <h2 id="t3-hardening">Work Hardening &amp; Hall-Petch</h2>
+    <p>As deformation proceeds, dislocation density ρ rises from ~10¹⁰ to ~10¹⁶ m⁻². More dislocations = more obstacles for other dislocations = higher stress needed to continue deformation = <strong>work hardening</strong>.</p>
+    <div class="formula-block">
+      <div class="formula-name">Hall-Petch equation</div>
+      <div class="formula-eq">$$\sigma_y = \sigma_0 + k_y \cdot d^{-1/2}$$</div>
+      <div class="formula-vars">
+        <div class="formula-var"><span class="formula-var-symbol">σ₀</span>lattice friction stress (MPa)</div>
+        <div class="formula-var"><span class="formula-var-symbol">k_y</span>Hall-Petch coefficient (MPa·mm^(−½) or MPa·m^(−½))</div>
+        <div class="formula-var"><span class="formula-var-symbol">d</span>mean grain diameter (must be consistent units with k_y)</div>
+      </div>
+      <p style="margin-top:10px">Grain boundaries block dislocation motion — dislocations pile up. Finer grains → more boundaries → higher yield stress. Breaks down below ~10 nm (grain boundary sliding takes over).</p>
+    </div>
+
+    <div class="example">
+      <div class="example-label">Worked example — Hall-Petch for 70/30 Brass</div>
+      <p class="example-q">σ₀ = 25 MPa, k_y = 12.5 MPa·mm^(−½). Find σ_y for d = 500 μm and d = 5 μm.</p>
+      <div class="example-step">d = 500 μm = 0.5 mm: σ_y = 25 + 12.5 × (0.5)^(−½) = 25 + 17.7 = <strong>42.7 MPa</strong></div>
+      <div class="example-step">d = 5 μm = 0.005 mm: σ_y = 25 + 12.5 × (0.005)^(−½) = 25 + 176.8 = <strong>201.8 MPa</strong></div>
+      <div class="example-answer">100× finer grain → 5× higher yield strength. Always check units: d and k_y must match (both mm or both m).</div>
+    </div>
+
+    <h2>Topic 3 essentials</h2>
+    <div class="concept-box">
+      <div class="concept-box-title revise-only">EXAM CHEAT SHEET</div>
+      <div class="concept-box-title learn-only">Quick recap</div>
+      <ul>
+        <li>Edge: b ⊥ line; Screw: b ∥ line; Mixed: b inclined; Loop: closed, constant b</li>
+        <li>Cross-slip: ONLY screw. Climb: ONLY edge, T &gt; 0.4T_m, non-conservative</li>
+        <li>Frank-Read critical stress: τ = Gb/l (l = pinned segment length, NOT grain size)</li>
+        <li>Hall-Petch: σ_y = σ₀ + k_y·d^(−½). Units of d and k_y must match</li>
+        <li>Dislocations cannot end inside crystal: must loop, reach surface, or end at node</li>
+        <li>At dislocation node: Σbᵢ = 0</li>
+        <li>Dislocation density: annealed ~10¹⁰ m⁻²; cold-worked ~10¹⁶ m⁻²</li>
+        <li>Edge energy &gt; screw energy by factor 1/(1−ν)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<!-- TOPIC 4 — STRENGTHENING & ANNEALING -->
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section id="t4" class="section">
+  <div class="container">
+    <div class="topic-num">Topic 4 of 7</div>
+    <h1>Strengthening Mechanisms &amp; Annealing</h1>
+    <p class="hero-subtitle learn-only">There are four main ways to strengthen a metal: solid solution, work hardening, grain refinement (Hall-Petch, covered in T3), and precipitation hardening. Each one works by impeding dislocation motion. Annealing does the reverse — it removes the effects of cold work.</p>
+
+    <div class="toc">
+      <div class="toc-title">In this topic</div>
+      <ul class="toc-list">
+        <li><a href="#t4-ss" class="toc-link">→ Solid solution strengthening</a></li>
+        <li><a href="#t4-precip" class="toc-link">→ Precipitation / age hardening</a></li>
+        <li><a href="#t4-cold" class="toc-link">→ Cold work &amp; annealing</a></li>
+      </ul>
+    </div>
+
+    <h2 id="t4-ss">Solid Solution Strengthening</h2>
+    <p class="learn-only">Dissolving a solute atom in a host lattice distorts the crystal locally. This strain field interacts with passing dislocations and impedes their motion, raising the yield stress.</p>
+    <div class="formula-block">
+      <div class="formula-name">Solid solution strengthening increment</div>
+      <div class="formula-eq">$$\Delta\sigma_s = k_s \cdot c^{1/2}$$</div>
+      <div class="formula-vars">
+        <div class="formula-var"><span class="formula-var-symbol">c</span>solute atomic fraction</div>
+        <div class="formula-var"><span class="formula-var-symbol">k_s</span>material constant (depends on misfit strain)</div>
+      </div>
+      <p style="margin-top:10px">Scales as c^(1/2), NOT linearly. Interstitials (e.g. C in Fe) cause both dilation AND shear strain → stronger effect than substitutionals of similar misfit.</p>
+    </div>
+    <div class="concept-box note learn-only">
+      <div class="concept-box-title">Cottrell atmospheres in steel</div>
+      <p>Carbon interstitials migrate to the tensile stress field of edge dislocations, forming a "cloud" (Cottrell atmosphere). This pins the dislocation. To start plastic flow, you must first rip the dislocation free — this produces the sharp <strong>upper yield point</strong>. After detachment, flow continues at the lower (true) yield stress. This is why mild steel shows a sharp yield drop.</p>
+    </div>
+
+    <h2 id="t4-precip">Precipitation / Age Hardening</h2>
+    <p>The most powerful strengthening mechanism. Requires a phase diagram with a solvus — solubility must decrease with decreasing temperature.</p>
+    <div class="concept-box note">
+      <div class="concept-box-title">Three-step heat treatment</div>
+      <ol>
+        <li><strong>Solution treat</strong> — heat into single-phase region; dissolve all solute</li>
+        <li><strong>Quench</strong> — rapid cool to room temperature; retain supersaturated solid solution</li>
+        <li><strong>Age</strong> — hold below solvus; controlled nucleation and growth of fine precipitates</li>
+      </ol>
+    </div>
+    <div class="formula-block">
+      <div class="formula-name">Orowan critical shear stress (incoherent precipitates)</div>
+      <div class="formula-eq">$$\tau_y \approx \frac{Gb}{L}$$</div>
+      <div class="formula-vars">
+        <div class="formula-var"><span class="formula-var-symbol">L</span>inter-particle spacing (mean free path)</div>
+        <div class="formula-var"><span class="formula-var-symbol">G</span>shear modulus; <span class="formula-var-symbol">b</span>Burgers vector</div>
+      </div>
+      <p style="margin-top:10px">τ_y ∝ 1/L: wider spacing = lower critical stress. This explains over-aging — as particles coarsen, L increases, and strength falls.</p>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Aging state</th><th>Precipitate</th><th>Dislocation interaction</th><th>Strength</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Under-aged</strong></td><td>Small, coherent</td><td>Cutting (shear through)</td><td>Below peak</td></tr>
+          <tr><td><strong>Peak-aged</strong></td><td>Optimal size</td><td>Mix of cutting and looping</td><td>Maximum</td></tr>
+          <tr><td><strong>Over-aged</strong></td><td>Large, incoherent (coarsened)</td><td>Orowan looping (bypass)</td><td>Falls</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="t4-cold">Cold Work &amp; Annealing</h2>
+    <p>Cold work = plastic deformation below 0.4T_m. Effects: grain elongation, dislocation density 10⁶→10¹² /cm³, increased strength, decreased ductility, increased electrical resistance.</p>
+    <div class="concept-box">
+      <div class="concept-box-title">Three stages of annealing</div>
+      <div class="table-wrap" style="margin:10px 0 0">
+        <table>
+          <thead><tr><th>Stage</th><th>What happens</th><th>Effect on strength</th><th>Effect on ductility</th></tr></thead>
+          <tbody>
+            <tr><td><strong>1. Recovery</strong></td><td>Dislocations rearrange to low-energy sub-grain walls (polygonisation). Residual stress relieved</td><td>Little change</td><td>Little change</td></tr>
+            <tr><td><strong>2. Recrystallisation</strong></td><td>New strain-free equiaxed grains nucleate at grain boundaries and grow. Dislocation density drops dramatically</td><td>Large decrease</td><td>Large increase</td></tr>
+            <tr><td><strong>3. Grain growth</strong></td><td>Large grains consume small ones. Total grain boundary area minimised</td><td>Slight decrease</td><td>Slight decrease</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="concept-box warn">
+      <div class="concept-box-title">Key exam distinction</div>
+      <p><strong>Recovery</strong> barely changes mechanical properties — it mainly restores conductivity. <strong>Recrystallisation</strong> causes the largest changes to strength and ductility. Recrystallisation temperature decreases with more prior cold work (more stored energy = easier nucleation).</p>
+    </div>
+
+    <h2>Topic 4 essentials</h2>
+    <div class="concept-box">
+      <div class="concept-box-title revise-only">EXAM CHEAT SHEET</div>
+      <div class="concept-box-title learn-only">Quick recap</div>
+      <ul>
+        <li>Solid solution strengthening: Δσ ∝ c^(1/2), not linear in c</li>
+        <li>Precipitation hardening: solution treat → quench → age</li>
+        <li>Orowan stress: τ ≈ Gb/L. Over-aging → L increases → strength falls</li>
+        <li>Peak aged = maximum hardness. Over-aged = coarsened particles, Orowan bypass, lower strength</li>
+        <li>Recovery: restores conductivity, barely changes mechanical properties</li>
+        <li>Recrystallisation: biggest mechanical property change (strength ↓↓, ductility ↑↑)</li>
+        <li>Cold work boundary: T &lt; 0.4T_m in KELVIN</li>
+        <li>Dispersion-strengthened materials retain strength at high T; precipitation-hardened do not</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<!-- TOPIC 5 — FRACTURE & FRACTURE MECHANICS -->
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section id="t5" class="section">
+  <div class="container">
+    <div class="topic-num">Topic 5 of 7</div>
+    <h1>Fracture &amp; Fracture Mechanics</h1>
+    <p class="hero-subtitle learn-only">Fracture is the most catastrophic form of mechanical failure. This topic gives you the tools to quantify it — from reading an SEM image to calculating the maximum safe stress for a component with a known crack.</p>
+
+    <div class="toc">
+      <div class="toc-title">In this topic</div>
+      <ul class="toc-list">
+        <li><a href="#t5-types" class="toc-link">→ Ductile vs brittle fracture</a></li>
+        <li><a href="#t5-dbt" class="toc-link">→ Ductile-to-brittle transition</a></li>
+        <li><a href="#t5-griffith" class="toc-link">→ Griffith criterion</a></li>
+        <li><a href="#t5-k" class="toc-link">→ Stress intensity factor &amp; K_IC</a></li>
+      </ul>
+    </div>
+
+    <h2 id="t5-types">Ductile vs Brittle Fracture</h2>
+    <div class="two-col">
+      <div class="concept-box success">
+        <div class="concept-box-title">Ductile fracture</div>
+        <ul>
+          <li>Large plastic deformation before fracture</li>
+          <li>Slow, stable crack growth — needs increasing stress</li>
+          <li>Strain-controlled, high energy absorbed</li>
+          <li>Cup-and-cone morphology in tension</li>
+          <li>Dimpled (dimple = microvoid) surface in SEM</li>
+          <li>Preferred: visible warning (necking) before failure</li>
+        </ul>
+      </div>
+      <div class="concept-box danger">
+        <div class="concept-box-title">Brittle fracture</div>
+        <ul>
+          <li>Little or no plastic deformation</li>
+          <li>Rapid, unstable crack propagation</li>
+          <li>Stress-controlled, low energy absorbed</li>
+          <li>Flat, granular, shiny surface</li>
+          <li>Cleavage facets or intergranular cracking in SEM</li>
+          <li>Dangerous: no warning — sudden catastrophic failure</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 id="t5-dbt">Ductile-to-Brittle Transition (DBT)</h2>
+    <p>BCC and HCP metals show a transition from ductile to brittle behaviour as temperature decreases. FCC metals do NOT show this transition (Al, Cu, austenitic stainless steel are safe at all temperatures).</p>
+    <div class="concept-box warn">
+      <div class="concept-box-title">Charpy impact test</div>
+      <p>Notched bar struck by pendulum. Energy absorbed = mg(h_start − h_end). Plots impact energy vs temperature, showing the transition. <strong>QUALITATIVE only</strong> — cannot be used directly in design calculations. Transition temperature T_t = temperature at 50% of upper shelf energy. Finer grain → lower T_t (better). More impurities → higher T_t (worse).</p>
+    </div>
+
+    <h2 id="t5-griffith">Griffith Criterion (Perfectly Brittle Materials)</h2>
+    <div class="formula-block">
+      <div class="formula-name">Griffith critical fracture stress</div>
+      <div class="formula-eq">$$\sigma_f = \sqrt{\frac{2E\gamma}{\pi a}}$$</div>
+      <div class="formula-vars">
+        <div class="formula-var"><span class="formula-var-symbol">γ</span>surface energy (J/m²) — energy to create new surface per unit area</div>
+        <div class="formula-var"><span class="formula-var-symbol">a</span>half crack length for internal crack; full crack length for edge crack</div>
+        <div class="formula-var"><span class="formula-var-symbol">E</span>Young's modulus (Pa)</div>
+      </div>
+      <p style="margin-top:10px"><strong>For perfectly brittle materials only (glass, ceramics).</strong> For metals and polymers, use Orowan-Irwin modification with effective surface energy γ_e = γ_s + γ_p where γ_p (plastic work) >> γ_s.</p>
+    </div>
+
+    <h2 id="t5-k">Stress Intensity Factor &amp; Fracture Toughness</h2>
+    <div class="formula-block">
+      <div class="formula-name">Stress intensity factor (Mode I)</div>
+      <div class="formula-eq">$$K = \alpha\sigma\sqrt{\pi a}$$</div>
+      <div class="formula-vars">
+        <div class="formula-var"><span class="formula-var-symbol">α</span>geometry factor (= 1 for edge crack in infinite plate)</div>
+        <div class="formula-var"><span class="formula-var-symbol">a</span>crack length (edge crack convention)</div>
+        <div class="formula-var"><span class="formula-var-symbol">K</span>stress intensity factor (MPa√m)</div>
+      </div>
+    </div>
+    <div class="formula-block">
+      <div class="formula-name">Fracture condition &amp; safe stress</div>
+      <div class="formula-eq">$$K \geq K_{IC} \Rightarrow \text{unstable fracture}$$</div>
+      <div class="formula-eq" style="margin-top:8px">$$\sigma_f = \frac{K_{IC}}{\alpha\sqrt{\pi a}}$$</div>
+      <div class="formula-vars">
+        <div class="formula-var"><span class="formula-var-symbol">K_IC</span>fracture toughness — material property (MPa√m). Pure metals: up to 200; Mild steel: ~50; Al alloys: ~20–40; Glass: ~0.2–1</div>
+      </div>
+    </div>
+    <div class="formula-block">
+      <div class="formula-name">Relationship between G_c and K_IC</div>
+      <div class="formula-eq">$$K_{IC}^2 = EG_C$$</div>
+      <div class="formula-vars">
+        <div class="formula-var"><span class="formula-var-symbol">G_C</span>critical strain energy release rate (J/m²) — energy released per unit new crack area</div>
+      </div>
+    </div>
+
+    <div class="example">
+      <div class="example-label">Case study — De Havilland Comet (1954)</div>
+      <p class="example-q">Early pressurised aircraft. Square windows with sharp corners created stress concentrations. Fatigue cracks grew from rivet holes. G_c ≈ 300 psi·in; applied stress ≈ 20,000 psi ≈ 138 MPa.</p>
+      <div class="example-step">a_c = G_c/(πσ²) = (300 × 0.0254) / (π × 138²×10⁶) ≈ 67 mm = 2.6 inches</div>
+      <div class="example-step">When the crack reached the window edge, the window width (~20 inches) was added to the crack length</div>
+      <div class="example-answer">Total effective crack length instantly exceeded a_c → catastrophic explosive decompression. Modern aircraft use rounded windows to eliminate stress concentrations.</div>
+    </div>
+
+    <h2>Topic 5 essentials</h2>
+    <div class="concept-box">
+      <div class="concept-box-title revise-only">EXAM CHEAT SHEET</div>
+      <div class="concept-box-title learn-only">Quick recap</div>
+      <ul>
+        <li>Ductile: strain-controlled, high energy, cup-and-cone, dimples in SEM</li>
+        <li>Brittle: stress-controlled, low energy, flat cleavage, no warning</li>
+        <li>DBT: BCC and HCP show it; FCC does NOT</li>
+        <li>Charpy: qualitative only. T_t = 50% upper shelf energy. Fine grain → lower T_t</li>
+        <li>Griffith: brittle only. σ_f = √(2Eγ/πa). Internal crack: a = half-length; edge crack: a = full length</li>
+        <li>K = σ√(πa) (α = 1 for edge crack). Fracture when K ≥ K_IC</li>
+        <li>K units: MPa√m; G units: J/m². K_IC² = EG_c</li>
+        <li>σ_f ∝ 1/√a — doubling crack length reduces safe stress by √2</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<!-- TOPIC 6 — FATIGUE -->
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section id="t6" class="section">
+  <div class="container">
+    <div class="topic-num">Topic 6 of 7</div>
+    <h1>Fatigue</h1>
+    <p class="hero-subtitle learn-only">Fatigue is the most common cause of engineering fracture — responsible for 50–90% of all mechanical failures. A part can fail under cyclic loads far below its UTS, often with no visible deformation. The surface is everything in fatigue.</p>
+
+    <div class="toc">
+      <div class="toc-title">In this topic</div>
+      <ul class="toc-list">
+        <li><a href="#t6-cycles" class="toc-link">→ Stress parameters &amp; S-N curves</a></li>
+        <li><a href="#t6-stages" class="toc-link">→ Stage I &amp; Stage II crack growth</a></li>
+        <li><a href="#t6-marks" class="toc-link">→ Striations vs beachmarks</a></li>
+        <li><a href="#t6-paris" class="toc-link">→ Paris Law</a></li>
+        <li><a href="#t6-improve" class="toc-link">→ Improving fatigue performance</a></li>
+      </ul>
+    </div>
+
+    <h2 id="t6-cycles">Stress Parameters &amp; S-N Curves</h2>
+    <div class="formula-block">
+      <div class="formula-name">Cyclic stress parameters</div>
+      <div class="formula-eq">$$R = \frac{\sigma_{min}}{\sigma_{max}} \qquad \Delta\sigma = \sigma_{max} - \sigma_{min} \qquad \sigma_{amp} = \frac{\Delta\sigma}{2} \qquad \sigma_m = \frac{\sigma_{max}+\sigma_{min}}{2}$$</div>
+      <div class="formula-vars">
+        <div class="formula-var"><span class="formula-var-symbol">R = −1</span>fully reversed (equal tension &amp; compression, σ_m = 0)</div>
+        <div class="formula-var"><span class="formula-var-symbol">R = 0</span>zero-to-max (pulsating tension)</div>
+        <div class="formula-var"><span class="formula-var-symbol">R = 0.5</span>high mean stress (σ_m = 0.75σ_max)</div>
+      </div>
+    </div>
+    <div class="concept-box note">
+      <div class="concept-box-title">S-N curve (Wöhler diagram)</div>
+      <p>Stress amplitude S plotted against log N_f (cycles to failure). For <strong>ferritic steels</strong>: curve flattens at a true <strong>fatigue limit</strong> (~UTS/2) below which infinite life is predicted. For <strong>Al, Ti, non-ferrous</strong>: no true limit — the curve keeps falling. Endurance quoted at 10⁶–10⁷ cycles instead.</p>
+    </div>
+
+    <h2 id="t6-stages">Stage I &amp; Stage II Crack Growth</h2>
+    <div class="two-col">
+      <div class="concept-box note">
+        <div class="concept-box-title">Stage I — Initiation</div>
+        <ul>
+          <li>Crack grows at <strong>45° to tensile axis</strong> along crystallographic slip planes</li>
+          <li>Microstructure-dependent; crack size &lt; one grain diameter</li>
+          <li>Dominated by N_i for smooth specimens</li>
+          <li>Driven by persistent slip bands (PSBs) — intrusions nucleate cracks</li>
+        </ul>
+      </div>
+      <div class="concept-box note">
+        <div class="concept-box-title">Stage II — Propagation</div>
+        <ul>
+          <li>Crack grows <strong>perpendicular to tensile axis</strong></li>
+          <li>Less microstructure-dependent</li>
+          <li>Governed by Paris Law (da/dN = C(ΔK)^m)</li>
+          <li>Blunting-resharpening mechanism: crack tip blunts on tensile half-cycle, resharpens on compressive</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 id="t6-marks">Striations vs Beachmarks</h2>
+    <div class="two-col">
+      <div class="card">
+        <h4 style="color:#f76c8a">Striations</h4>
+        <ul>
+          <li><strong>Microscopic</strong> — visible only by SEM</li>
+          <li><strong>One per cycle</strong></li>
+          <li>Stage II mechanism</li>
+          <li>Absent in fast-fracture (Stage III) zone</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4 style="color:#f76c8a">Beachmarks (clamshell marks)</h4>
+        <ul>
+          <li><strong>Macroscopic</strong> — visible to naked eye</li>
+          <li><strong>NOT one cycle each</strong> — each mark = thousands of striations</li>
+          <li>Caused by loading interruptions (machine stop, temperature change)</li>
+          <li>Concentric around initiation site</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 id="t6-paris">Paris Law</h2>
+    <div class="formula-block">
+      <div class="formula-name">Paris Law (Stage II crack growth)</div>
+      <div class="formula-eq">$$\frac{da}{dN} = C(\Delta K)^m \qquad \Delta K = Y\Delta\sigma\sqrt{\pi a}$$</div>
+      <div class="formula-vars">
+        <div class="formula-var"><span class="formula-var-symbol">da/dN</span>crack growth rate per cycle (m/cycle)</div>
+        <div class="formula-var"><span class="formula-var-symbol">ΔK</span>stress intensity factor range = K_max − K_min</div>
+        <div class="formula-var"><span class="formula-var-symbol">C, m</span>material constants. For metals: m ≈ 2–4</div>
+      </div>
+      <p style="margin-top:10px">Valid for Stage II only. There is a threshold ΔK_th below which cracks do not grow (very long life). Above K_IC, fast fracture occurs.</p>
+    </div>
+
+    <h2 id="t6-improve">Improving Fatigue Performance</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h4 style="color:#f76c8a">Surface finish</h4>
+        <p>Smooth polished surfaces extend fatigue life — surface notches act as stress concentrators for Stage I crack initiation. Always machine perpendicular to expected load direction.</p>
+      </div>
+      <div class="card">
+        <h4 style="color:#f76c8a">Shot peening</h4>
+        <p>Creates a compressive residual stress layer ~¼–½ shot diameter deep. Compressive stress opposes crack opening → dramatically increases N_i. Widely used in aerospace (turbine blades, landing gear). Over-peening is counterproductive — introduces subsurface tensile stress.</p>
+      </div>
+      <div class="card">
+        <h4 style="color:#f76c8a">Case hardening</h4>
+        <p>Carburising or nitriding introduces hard, strong, compressive surface layer. Raises threshold for crack initiation. Used in gears and shafts.</p>
+      </div>
+    </div>
+    <div class="formula-block">
+      <div class="formula-name">Mean stress correction — Goodman (conservative) &amp; Gerber</div>
+      <div class="formula-eq">$$\text{Goodman: } \sigma_a = \sigma_e\left[1 - \frac{\sigma_m}{\sigma_u}\right] \qquad \text{Gerber: } \sigma_a = \sigma_e\left[1 - \left(\frac{\sigma_m}{\sigma_u}\right)^2\right]$$</div>
+      <p style="margin-top:8px">Tensile mean stress reduces fatigue life. Use Goodman for design (conservative). Gerber is less conservative and fits experimental data better but is not used for safety-critical work.</p>
+    </div>
+
+    <h2>Topic 6 essentials</h2>
+    <div class="concept-box">
+      <div class="concept-box-title revise-only">EXAM CHEAT SHEET</div>
+      <div class="concept-box-title learn-only">Quick recap</div>
+      <ul>
+        <li>Fatigue occurs BELOW UTS — often below yield. Never use static strength for cyclic design</li>
+        <li>R = σ_min/σ_max. R = −1: fully reversed. R = 0: pulsating. R = 0.5: high mean stress</li>
+        <li>Stage I: 45° to stress axis. Stage II: perpendicular. Stage III: fast fracture</li>
+        <li>Striations: one per cycle, SEM only. Beachmarks: macroscopic, NOT one cycle each</li>
+        <li>Paris Law Stage II only: da/dN = C(ΔK)^m</li>
+        <li>Ferritic steels: true fatigue limit ~UTS/2. Al, Ti: no true limit</li>
+        <li>Shot peening: compressive residual stress → opposes crack opening</li>
+        <li>Tensile mean stress reduces life; compressive extends it</li>
+        <li>N_f = N_i + N_p. Smooth specimen: N_i dominant. Pre-cracked: N_p dominant</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<!-- TOPIC 7 — CREEP & STRESS CORROSION CRACKING -->
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section id="t7" class="section">
+  <div class="container">
+    <div class="topic-num">Topic 7 of 7</div>
+    <h1>Creep &amp; Stress Corrosion Cracking</h1>
+    <p class="hero-subtitle learn-only">Creep is time-dependent deformation under constant stress at elevated temperature. SCC is cracking driven by the simultaneous action of stress, environment, and a susceptible material. Both are insidious because they cause failure below the yield stress.</p>
+
+    <div class="toc">
+      <div class="toc-title">In this topic</div>
+      <ul class="toc-list">
+        <li><a href="#t7-stages" class="toc-link">→ Three creep stages</a></li>
+        <li><a href="#t7-laws" class="toc-link">→ Power Law &amp; Arrhenius</a></li>
+        <li><a href="#t7-mechanisms" class="toc-link">→ Creep mechanisms</a></li>
+        <li><a href="#t7-scc" class="toc-link">→ Stress Corrosion Cracking</a></li>
+      </ul>
+    </div>
+
+    <h2 id="t7-stages">Three Creep Stages</h2>
+    <div class="concept-box note">
+      <div class="concept-box-title">When does creep matter?</div>
+      <p>Creep is significant when T &gt; 0.3–0.4T_m in KELVIN. Lead (T_m = 600 K) creeps under its own weight at room temperature (300 K = 0.5T_m). Copper pipes (T_m = 1356 K): at room temperature, T/T_m = 0.22 → no creep. Always compute T/T_m in Kelvin, never Celsius.</p>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Stage</th><th>Creep rate</th><th>What's happening</th><th>Design use?</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1. Primary</strong></td><td>Decreasing</td><td>Work hardening dominates</td><td>No</td></tr>
+          <tr><td><strong>2. Secondary (steady-state)</strong></td><td>Constant minimum ε̇_s</td><td>Hardening balanced by recovery/climb</td><td>Yes — key design parameter</td></tr>
+          <tr><td><strong>3. Tertiary</strong></td><td>Accelerating</td><td>Necking, grain boundary cavitation</td><td>No — impending fracture</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="t7-laws">Power Law &amp; Arrhenius</h2>
+    <div class="formula-block">
+      <div class="formula-name">Norton's Power Law (stress dependence)</div>
+      <div class="formula-eq">$$\dot{\varepsilon}_s \propto \sigma^n \quad;\quad \log\dot{\varepsilon}_s = \log A + n\log\sigma$$</div>
+      <div class="formula-vars">
+        <div class="formula-var"><span class="formula-var-symbol">n</span>stress exponent. n ≈ 1: diffusional creep. n ≈ 5: dislocation creep (most engineering situations)</div>
+      </div>
+    </div>
+    <div class="formula-block">
+      <div class="formula-name">Arrhenius (temperature dependence)</div>
+      <div class="formula-eq">$$\dot{\varepsilon}_s \propto \exp\!\left(-\frac{Q_C}{RT}\right) \quad;\quad \ln\dot{\varepsilon}_s = \text{const} - \frac{Q_C}{R}\cdot\frac{1}{T}$$</div>
+      <div class="formula-vars">
+        <div class="formula-var"><span class="formula-var-symbol">Q_C</span>activation energy for creep (J/mol)</div>
+        <div class="formula-var"><span class="formula-var-symbol">R</span>8.314 J mol⁻¹ K⁻¹</div>
+        <div class="formula-var"><span class="formula-var-symbol">T</span>ALWAYS in KELVIN</div>
+      </div>
+      <p style="margin-top:10px">Q_C from experiment: plot ln ε̇_s vs 1/T. Gradient = −Q_C/R. Q_C = −R × gradient (the minus sign is critical and frequently forgotten).</p>
+    </div>
+    <div class="formula-block">
+      <div class="formula-name">Combined Power Law (full equation)</div>
+      <div class="formula-eq">$$\dot{\varepsilon}_s = A\sigma^n \exp\!\left(-\frac{Q_C}{RT}\right)$$</div>
+      <p style="margin-top:8px">When A is unknown: use ratios for same material, different conditions — A cancels.</p>
+    </div>
+
+    <div class="example">
+      <div class="example-label">Worked example — determining Q_C from Arrhenius plot</div>
+      <p class="example-q">At T₁ = 900 K: ε̇_s = 2.0×10⁻⁵ s⁻¹. At T₂ = 800 K: ε̇_s = 8.0×10⁻⁷ s⁻¹. Find Q_C.</p>
+      <div class="example-step">ln(2.0×10⁻⁵) = −10.82 at 1/T₁ = 1.111×10⁻³ K⁻¹</div>
+      <div class="example-step">ln(8.0×10⁻⁷) = −14.04 at 1/T₂ = 1.250×10⁻³ K⁻¹</div>
+      <div class="example-step">Gradient = (−10.82 − (−14.04)) / (1.111×10⁻³ − 1.250×10⁻³) = 3.22 / (−1.39×10⁻⁴) = −23,165 K</div>
+      <div class="example-answer">Q_C = −R × gradient = −8.314 × (−23,165) = 193 kJ/mol</div>
+    </div>
+
+    <h2 id="t7-mechanisms">Creep Mechanisms</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Mechanism</th><th>n</th><th>Q_C</th><th>ε̇ ∝</th><th>Dominant when</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Nabarro-Herring</strong></td><td>≈ 1</td><td>Q_SD (self-diff.)</td><td>σ/d²</td><td>T &gt; 0.7T_m, low σ, coarse grain</td></tr>
+          <tr><td><strong>Coble</strong></td><td>≈ 1</td><td>Q_GB (grain boundary diff.)</td><td>σ/d³</td><td>0.4–0.7T_m, low σ, fine grain</td></tr>
+          <tr><td><strong>Dislocation creep</strong></td><td>≈ 5</td><td>Q_SD</td><td>σ⁵</td><td>Engineering stresses (dominant)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="concept-box warn">
+      <div class="concept-box-title">Why diffusional creep rates don't match experiments</div>
+      <p>Calculated Nabarro-Herring and Coble rates at engineering stresses are 6–7 orders of magnitude below observed rates. Dislocation creep (n ≈ 5) dominates in practice. The diffusional mechanisms only matter at very high temperatures and very low stresses.</p>
+    </div>
+
+    <h2 id="t7-scc">Stress Corrosion Cracking (SCC)</h2>
+    <div class="concept-box danger">
+      <div class="concept-box-title">Three simultaneous conditions required — remove any one to stop SCC</div>
+      <ol>
+        <li><strong>Tensile stress</strong> (applied or residual, e.g. from welding)</li>
+        <li><strong>Susceptible material</strong> (austenitic SS in Cl⁻; brass in ammonia; high-strength steel in H₂)</li>
+        <li><strong>Reactive environment</strong> (Cl⁻ ions, H₂S, ammonia, etc.)</li>
+      </ol>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <h4 style="color:#f7d54a">Pitting corrosion → SCC initiation</h4>
+        <p>Cl⁻ breaks down passive oxide film locally. Inside pit: stagnant electrolyte, O₂ depleted, Cl⁻ enriched, pH ≈ 2. Pit acts as a sharp stress concentrator → SCC crack initiates from pit base.</p>
+      </div>
+      <div class="card">
+        <h4 style="color:#f7d54a">Hydrogen embrittlement</h4>
+        <p>Atomic H (radius 53 pm) diffuses into lattice, accumulates at stress concentrations and grain boundaries. BCC and HCP most susceptible. As little as 0.0001 wt% H can crack high-strength steels. Worst at intermediate temperatures and low strain rates.</p>
+      </div>
+    </div>
+    <div class="concept-box note">
+      <div class="concept-box-title">Prevention strategies</div>
+      <ul>
+        <li><strong>Material selection</strong> — avoid susceptible alloy-environment combinations</li>
+        <li><strong>Remove the environment</strong> — deaerate, reduce Cl⁻ concentration, use inhibitors</li>
+        <li><strong>Reduce stress</strong> — post-weld heat treatment to relieve residual stresses; design to avoid stress concentrations</li>
+        <li><strong>Cathodic protection</strong> — make the structure the cathode (galvanic or impressed current)</li>
+        <li><strong>Protective coatings</strong> — prevent environmental access to metal surface</li>
+      </ul>
+    </div>
+
+    <h2>Topic 7 essentials</h2>
+    <div class="concept-box">
+      <div class="concept-box-title revise-only">EXAM CHEAT SHEET</div>
+      <div class="concept-box-title learn-only">Quick recap</div>
+      <ul>
+        <li>Creep significant when T &gt; 0.3–0.4T_m in KELVIN. Lead creeps at room temperature</li>
+        <li>Secondary (steady-state) creep rate ε̇_s is the design-critical parameter</li>
+        <li>Power Law: ε̇_s ∝ σ^n. n ≈ 1 → diffusional; n ≈ 5 → dislocation creep</li>
+        <li>Arrhenius: ln ε̇_s vs 1/T → gradient = −Q_C/R → Q_C = −R × gradient (mind the sign!)</li>
+        <li>Combined: ε̇_s = Aσ^n exp(−Q_C/RT). Use ratios when A is unknown</li>
+        <li>Nabarro-Herring: ε̇ ∝ σ/d². Coble: ε̇ ∝ σ/d³. Both n ≈ 1</li>
+        <li>SCC needs ALL THREE: tensile stress + reactive environment + susceptible material</li>
+        <li>SCC causes brittle failure of normally DUCTILE metals — its defining danger</li>
+        <li>Hydrogen embrittlement worst near room temperature and at LOW strain rates</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<!-- REVISION EXAMPLES -->
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section id="revision" class="section">
+  <div class="container">
+    <h1>Revision Examples</h1>
+    <p class="hero-subtitle">Integrative worked examples pulling together multiple topics. Closest to actual exam questions.</p>
+
+    <h2>Tensile Test Calculations (Q1 in every paper)</h2>
+    <div class="example">
+      <div class="example-label">2021-22 Online Exam Q1 — Full tensile test analysis</div>
+      <p class="example-q">Cylindrical specimen: gauge diameter 4.5 mm, gauge length 20 mm. Load/extension data: 0/0, 1600/0.02, 3200/0.04, 5600/0.07, 7200/0.09, 9500/0.15, 11000/0.25, 13200/0.5, 14200/0.85, 14000/1.0, 13500/1.2 (N/mm). Find E, UTS, yield strength, 0.2% proof stress, total and plastic strain to failure.</p>
+      <div class="example-step">A₀ = π(4.5/2)²/4 = 15.90 mm² (A₀ = πd²/4)</div>
+      <div class="example-step">E: linear region — at F=3200 N: σ=3200/15.90=201.3 MPa; ε=0.04/20=0.002 → E = 201.3/0.002 = <strong>100.7 GPa</strong></div>
+      <div class="example-step">UTS = 14200/15.90 = <strong>892.7 MPa</strong> (peak load)</div>
+      <div class="example-step">Total strain to failure = 1.2/20 = <strong>0.060</strong></div>
+      <div class="example-step">Elastic springback = σ_fracture/E = (13500/15.90)/100,700 MPa = 848.4/100,700 = 0.0084</div>
+      <div class="example-step">Plastic strain = 0.060 − 0.0084 = <strong>0.052</strong></div>
+      <div class="example-step">Yield strength (from graph, kink point) ≈ <strong>452.6 MPa</strong></div>
+      <div class="example-answer">0.2% proof stress (offset line from ε = 0.002 parallel to elastic slope intersects curve) ≈ <strong>605 MPa</strong></div>
+    </div>
+
+    <div class="example">
+      <div class="example-label">May/June 2025 Q1 — Tensile test (smaller specimen)</div>
+      <p class="example-q">Gauge diameter 4.5 mm, gauge length 9 mm. Data: 0/0, 5.3/0.022, 9.1/0.039, 14.9/0.071, 16.4/0.154, 17.6/0.63, 16.3/0.95, 15.4/1.02 (kN/mm).</p>
+      <div class="example-step">A₀ = π(4.5)²/4 = 15.90 mm². Convert kN→N first</div>
+      <div class="example-step">E: at F=9100 N: σ=9100/15.90=572 MPa; ε=0.039/9=0.00433 → E = 572/0.00433 = <strong>132 GPa</strong></div>
+      <div class="example-step">UTS = 17600/15.90 = <strong>1107 MPa</strong></div>
+      <div class="example-step">Total strain at failure = 1.02/9 = <strong>0.113</strong></div>
+      <div class="example-answer">Yield point visible as change in linearity. 0.2% proof stress from 0.002 offset line.</div>
+    </div>
+
+    <h2>Dislocations &amp; Strengthening</h2>
+    <div class="example">
+      <div class="example-label">Hall-Petch — 70/30 Brass</div>
+      <p class="example-q">σ₀ = 25 MPa, k_y = 12.5 MPa·mm^(−½). Compare d = 500 μm vs d = 5 μm.</p>
+      <div class="example-step">d = 0.5 mm: σ_y = 25 + 12.5/√0.5 = 25 + 17.7 = <strong>42.7 MPa</strong></div>
+      <div class="example-answer">d = 0.005 mm: σ_y = 25 + 12.5/√0.005 = 25 + 176.8 = <strong>201.8 MPa</strong>. Units of d must match k_y.</div>
+    </div>
+
+    <h2>Fracture Mechanics</h2>
+    <div class="example">
+      <div class="example-label">2021-22 Q3e — Griffith critical flaw size in glass</div>
+      <p class="example-q">Glass panel: σ = 50 MPa, γ = 0.3 J/m², E = 70 GPa. Find maximum safe flaw size (edge crack).</p>
+      <div class="example-step">σ_f = √(2Eγ/πa) → rearrange: a = 2Eγ/(πσ²)</div>
+      <div class="example-step">a_c = (2 × 70×10⁹ × 0.3) / (π × (50×10⁶)²)</div>
+      <div class="example-step">a_c = 42×10⁹ / (π × 2.5×10¹⁵) = 42×10⁹ / 7.854×10¹⁵</div>
+      <div class="example-answer">a_c = 5.35 × 10⁻⁶ m = <strong>5.4 μm</strong>. Any flaw larger than 5.4 μm will cause spontaneous fracture at 50 MPa.</div>
+    </div>
+
+    <h2>Fatigue</h2>
+    <div class="example">
+      <div class="example-label">R-ratio and stress parameters</div>
+      <p class="example-q">A component experiences R = −0.5 with σ_max = 200 MPa. Find σ_min, Δσ, σ_amp, and σ_m.</p>
+      <div class="example-step">R = σ_min/σ_max → σ_min = R × σ_max = −0.5 × 200 = <strong>−100 MPa</strong> (compressive)</div>
+      <div class="example-step">Δσ = 200 − (−100) = <strong>300 MPa</strong></div>
+      <div class="example-step">σ_amp = 300/2 = <strong>150 MPa</strong></div>
+      <div class="example-answer">σ_m = (200 + (−100))/2 = <strong>50 MPa</strong> (tensile mean stress — reduces fatigue life vs R = −1)</div>
+    </div>
+
+    <h2>Creep</h2>
+    <div class="example">
+      <div class="example-label">Determining Q_C from two temperature data points</div>
+      <p class="example-q">Same alloy, same stress: at 700°C (973 K) ε̇_s = 3.0×10⁻⁵ s⁻¹; at 600°C (873 K) ε̇_s = 6.0×10⁻⁷ s⁻¹. Find Q_C.</p>
+      <div class="example-step">ln(3.0×10⁻⁵) = −10.41; 1/973 = 1.028×10⁻³ K⁻¹</div>
+      <div class="example-step">ln(6.0×10⁻⁷) = −14.33; 1/873 = 1.146×10⁻³ K⁻¹</div>
+      <div class="example-step">gradient = (−10.41 − (−14.33)) / (1.028×10⁻³ − 1.146×10⁻³) = 3.92 / (−1.18×10⁻⁴) = −33,220 K</div>
+      <div class="example-answer">Q_C = −8.314 × (−33,220) = <strong>276 kJ/mol</strong>. Always use Kelvin temperatures.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<!-- PRACTICE PROBLEMS -->
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section id="problems" class="section">
+  <div class="container">
+    <h1>Practice Problems</h1>
+    <p class="hero-subtitle">Exam-style questions drawn from past papers. Attempt each before revealing the answer.</p>
+
+    <h2>Stress &amp; Strain (T1)</h2>
+    <div class="problem-card">
+      <div class="problem-header">
+        <span class="problem-tag">T1 — Tensile test calculation</span>
+        <button class="reveal-btn" onclick="toggleReveal(this)">Show answer</button>
+      </div>
+      <div class="problem-q">A cylindrical tensile specimen has gauge diameter 10 mm and gauge length 50 mm. At a load of 25 kN the specimen has extended by 0.1 mm and the diameter has decreased by 0.003 mm. Calculate: (a) engineering stress; (b) engineering strain; (c) Young's modulus; (d) lateral strain; (e) Poisson's ratio.</div>
+      <div class="problem-answer">
+        <div class="ans-step">(a) A₀ = π(0.01)²/4 = 7.854×10⁻⁵ m²; σ = 25000/7.854×10⁻⁵ = <strong>318 MPa</strong></div>
+        <div class="ans-step">(b) ε_z = 0.1/50 = <strong>0.002</strong></div>
+        <div class="ans-step">(c) E = σ/ε = 318/0.002 = <strong>159 GPa</strong></div>
+        <div class="ans-step">(d) ε_x = −0.003/10 = <strong>−3×10⁻⁴</strong></div>
+        <div class="ans-final">(e) ν = −ε_x/ε_z = 3×10⁻⁴/0.002 = <strong>0.15</strong></div>
+      </div>
+    </div>
+
+    <div class="problem-card">
+      <div class="problem-header">
+        <span class="problem-tag">T1 — Stress-strain curve reading</span>
+        <button class="reveal-btn" onclick="toggleReveal(this)">Show answer</button>
+      </div>
+      <div class="problem-q">From a stress-strain curve: elastic slope gives E = 200 GPa. The curve leaves linearity at σ = 300 MPa. Fracture occurs at σ = 250 MPa (engineering) and ε = 0.35. Find: (a) yield strength; (b) elastic springback at fracture; (c) plastic strain to failure; (d) which quantity is larger — yield strength or 0.2% proof stress?</div>
+      <div class="problem-answer">
+        <div class="ans-step">(a) Yield strength = <strong>300 MPa</strong> (where linearity ends)</div>
+        <div class="ans-step">(b) Elastic springback = σ_fracture/E = 250×10⁶/200×10⁹ = <strong>0.00125</strong></div>
+        <div class="ans-step">(c) Plastic strain = 0.35 − 0.00125 = <strong>0.349</strong></div>
+        <div class="ans-final">(d) 0.2% proof stress &gt; yield strength (proof stress is the stress at 0.2% plastic strain, which is slightly beyond the yield point)</div>
+      </div>
+    </div>
+
+    <h2>Dislocations &amp; Deformation (T2, T3)</h2>
+    <div class="problem-card">
+      <div class="problem-header">
+        <span class="problem-tag">T2 — Schmid's Law</span>
+        <button class="reveal-btn" onclick="toggleReveal(this)">Show answer</button>
+      </div>
+      <div class="problem-q">A single crystal of copper (τ_CRSS = 0.5 MPa) is loaded in tension. The primary slip system has λ = 35° and φ = 60°. Find: (a) the Schmid factor; (b) the tensile yield stress; (c) the resolved shear stress at σ = 1.5 MPa.</div>
+      <div class="problem-answer">
+        <div class="ans-step">(a) m = cos(35°) cos(60°) = 0.819 × 0.500 = <strong>0.410</strong></div>
+        <div class="ans-step">(b) σ_y = τ_CRSS/m = 0.5/0.410 = <strong>1.22 MPa</strong></div>
+        <div class="ans-final">(c) τ_RSS = σm = 1.5 × 0.410 = <strong>0.615 MPa</strong> (exceeds τ_CRSS → slip is occurring)</div>
+      </div>
+    </div>
+
+    <div class="problem-card">
+      <div class="problem-header">
+        <span class="problem-tag">T3 — Frank-Read source</span>
+        <button class="reveal-btn" onclick="toggleReveal(this)">Show answer</button>
+      </div>
+      <div class="problem-q">An aluminium crystal (G = 26 GPa, b = 0.286 nm) has a Frank-Read source with pinned segment length l = 1.5 μm. (a) What shear stress is needed to activate this source? (b) If grain size d = 20 μm with one source per grain, how does τ_FR compare to the Hall-Petch strengthening increment (assume k_y = 0.07 MPa·m^(½), σ₀ = 10 MPa)?</div>
+      <div class="problem-answer">
+        <div class="ans-step">(a) τ_FR = Gb/l = (26×10⁹ × 0.286×10⁻⁹) / 1.5×10⁻⁶ = 7.44 / 1.5×10⁻⁶ = <strong>4.96 MPa</strong></div>
+        <div class="ans-step">(b) σ_y = 10 + 0.07/√(0.00002) = 10 + 0.07/0.00447 = 10 + 15.7 = <strong>25.7 MPa</strong></div>
+        <div class="ans-final">Hall-Petch gives σ_y = 25.7 MPa (tensile); converted to shear ≈ 25.7/2 ≈ 12.8 MPa >> τ_FR = 4.96 MPa. Grain boundaries provide more resistance than initiating the Frank-Read source.</div>
+      </div>
+    </div>
+
+    <h2>Fracture (T5)</h2>
+    <div class="problem-card">
+      <div class="problem-header">
+        <span class="problem-tag">T5 — K_IC and safe stress</span>
+        <button class="reveal-btn" onclick="toggleReveal(this)">Show answer</button>
+      </div>
+      <div class="problem-q">A steel plate (K_IC = 55 MPa√m) contains an edge crack of length 3 mm. (a) What is the maximum safe applied stress (α = 1)? (b) If the applied stress is 300 MPa, what is the maximum safe crack length?</div>
+      <div class="problem-answer">
+        <div class="ans-step">(a) σ_f = K_IC / (α√(πa)) = 55 / √(π × 0.003) = 55 / 0.09708 = <strong>566 MPa</strong></div>
+        <div class="ans-step">(b) K = σ√(πa) ≤ K_IC → a ≤ (K_IC/σ)²/π = (55/300)²/π = 0.0336/π</div>
+        <div class="ans-final">a_max = <strong>0.0107 m = 10.7 mm</strong>. The 3 mm crack is safe at 300 MPa (below K_IC).</div>
+      </div>
+    </div>
+
+    <h2>Fatigue (T6)</h2>
+    <div class="problem-card">
+      <div class="problem-header">
+        <span class="problem-tag">T6 — Goodman correction</span>
+        <button class="reveal-btn" onclick="toggleReveal(this)">Show answer</button>
+      </div>
+      <div class="problem-q">A steel component (UTS = 800 MPa, fatigue limit σ_e = 400 MPa at R = −1) operates with a mean stress σ_m = 200 MPa. Using the Goodman criterion, find the allowable stress amplitude. Compare to the uncorrected fatigue limit.</div>
+      <div class="problem-answer">
+        <div class="ans-step">σ_a = σ_e[1 − σ_m/σ_u] = 400[1 − 200/800] = 400 × 0.75</div>
+        <div class="ans-final">σ_a = <strong>300 MPa</strong> (vs 400 MPa uncorrected). The tensile mean stress reduces the allowable amplitude by 25%.</div>
+      </div>
+    </div>
+
+    <h2>Creep (T7)</h2>
+    <div class="problem-card">
+      <div class="problem-header">
+        <span class="problem-tag">T7 — Power Law creep ratio</span>
+        <button class="reveal-btn" onclick="toggleReveal(this)">Show answer</button>
+      </div>
+      <div class="problem-q">A nickel superalloy follows ε̇_s = Aσ^n exp(−Q_C/RT) with n = 5 and Q_C = 280 kJ/mol. At 900°C (1173 K) and σ = 100 MPa, ε̇_s = 1.2×10⁻⁸ s⁻¹. Find the creep rate at (a) 950°C (1223 K), same stress; (b) 900°C, σ = 150 MPa.</div>
+      <div class="problem-answer">
+        <div class="ans-step">(a) ε̇₂/ε̇₁ = exp(−Q_C/RT₂)/exp(−Q_C/RT₁) = exp[Q_C/R × (1/T₁ − 1/T₂)]</div>
+        <div class="ans-step">= exp[(280000/8.314)(1/1173 − 1/1223)] = exp[33670 × 3.485×10⁻⁵] = exp(1.174) = 3.23</div>
+        <div class="ans-step">ε̇₂ = 3.23 × 1.2×10⁻⁸ = <strong>3.88×10⁻⁸ s⁻¹</strong></div>
+        <div class="ans-step">(b) ε̇₂/ε̇₁ = (σ₂/σ₁)^n = (150/100)^5 = 1.5^5 = 7.594</div>
+        <div class="ans-final">ε̇₂ = 7.594 × 1.2×10⁻⁸ = <strong>9.11×10⁻⁸ s⁻¹</strong></div>
+      </div>
+    </div>
+
+    <div class="concept-box success">
+      <div class="concept-box-title">How to use these problems</div>
+      <p>Cover the answer, work through on paper, then compare. If you got the right answer via a different route, check the shown method too — there may be a faster approach. Every error is a topic to re-read.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<!-- FORMULA SHEET -->
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section id="formulas" class="section">
+  <div class="container">
+    <h1>Formula Sheet</h1>
+    <p class="hero-subtitle">Every calculation in the module. Variables defined, units stated.</p>
+
+    <h2>T1 — Stress &amp; Strain</h2>
+    <div class="formula-block">
+      <div class="formula-name">Engineering stress &amp; strain</div>
+      <div class="formula-eq">$$\sigma = \frac{F}{A_0} \qquad \varepsilon = \frac{l_i - l_0}{l_0} \qquad \sigma = E\varepsilon$$</div>
+      <div class="formula-vars">
+        <div class="formula-var"><span class="formula-var-symbol">A₀</span>original area (m²); <span class="formula-var-symbol">E</span>Young's modulus (GPa)</div>
+      </div>
+    </div>
+    <div class="formula-block">
+      <div class="formula-name">Poisson's ratio &amp; lateral strain</div>
+      <div class="formula-eq">$$\nu = -\frac{\varepsilon_x}{\varepsilon_z} \approx 0.3 \qquad \varepsilon_x = \frac{\Delta d}{d_0}$$</div>
+    </div>
+    <div class="formula-block">
+      <div class="formula-name">Circular cross-section &amp; hardness</div>
+      <div class="formula-eq">$$A_0 = \frac{\pi d^2}{4} \qquad \sigma_y \approx \frac{H}{3}$$</div>
+    </div>
+
+    <h2>T2 — Deformation &amp; Schmid</h2>
+    <div class="formula-block">
+      <div class="formula-name">Resolved shear stress &amp; yield</div>
+      <div class="formula-eq">$$\tau_{RSS} = \sigma\cos\lambda\cos\phi = \sigma m \qquad \sigma_y = \frac{\tau_{CRSS}}{m}$$</div>
+      <div class="formula-vars">
+        <div class="formula-var"><span class="formula-var-symbol">m</span>Schmid factor (max 0.5 at λ=φ=45°)</div>
+      </div>
+    </div>
+    <div class="formula-block">
+      <div class="formula-name">Theoretical maximum shear stress</div>
+      <div class="formula-eq">$$\tau_{max} \approx \frac{G}{2\pi}$$</div>
+      <p style="margin-top:8px">Experimental CRSS is 10³–10⁴× lower — proves dislocations exist.</p>
+    </div>
+
+    <h2>T3 — Dislocations</h2>
+    <div class="formula-block">
+      <div class="formula-name">Dislocation energy, force, Frank-Read, Hall-Petch</div>
+      <div class="formula-eq">$$U_s = Gb^2 \qquad U_e = \frac{Gb^2}{1-\nu} \qquad F = \tau b$$</div>
+      <div class="formula-eq" style="margin-top:8px">$$\tau_{FR} = \frac{Gb}{l} \qquad \sigma_y = \sigma_0 + k_y d^{-1/2}$$</div>
+      <div class="formula-vars">
+        <div class="formula-var"><span class="formula-var-symbol">l</span>pinned segment length (not grain size)</div>
+        <div class="formula-var"><span class="formula-var-symbol">d</span>grain diameter; units must match k_y</div>
+      </div>
+    </div>
+
+    <h2>T4 — Strengthening</h2>
+    <div class="formula-block">
+      <div class="formula-name">Solid solution &amp; Orowan strengthening</div>
+      <div class="formula-eq">$$\Delta\sigma_s = k_s c^{1/2} \qquad \tau_y \approx \frac{Gb}{L}$$</div>
+      <div class="formula-vars">
+        <div class="formula-var"><span class="formula-var-symbol">c</span>solute atomic fraction; <span class="formula-var-symbol">L</span>inter-particle spacing</div>
+      </div>
+    </div>
+
+    <h2>T5 — Fracture</h2>
+    <div class="formula-block">
+      <div class="formula-name">Griffith (brittle), Stress Intensity Factor, Fracture Toughness</div>
+      <div class="formula-eq">$$\sigma_f = \sqrt{\frac{2E\gamma}{\pi a}} \qquad K = \alpha\sigma\sqrt{\pi a} \qquad K_{IC}^2 = EG_C$$</div>
+      <div class="formula-vars">
+        <div class="formula-var"><span class="formula-var-symbol">a</span>half-length for internal crack; full length for edge crack</div>
+        <div class="formula-var"><span class="formula-var-symbol">α</span>= 1 for edge crack in infinite plate</div>
+      </div>
+    </div>
+    <div class="formula-block">
+      <div class="formula-name">Ductility measures</div>
+      <div class="formula-eq">$$\%EL = \frac{l_f - l_0}{l_0}\times 100 \qquad \%RA = \frac{A_0 - A_f}{A_0}\times 100$$</div>
+    </div>
+
+    <h2>T6 — Fatigue</h2>
+    <div class="formula-block">
+      <div class="formula-name">Stress parameters &amp; fatigue life</div>
+      <div class="formula-eq">$$R = \frac{\sigma_{min}}{\sigma_{max}} \qquad \Delta\sigma = \sigma_{max}-\sigma_{min} \qquad \sigma_{amp} = \frac{\Delta\sigma}{2} \qquad \sigma_m = \frac{\sigma_{max}+\sigma_{min}}{2}$$</div>
+    </div>
+    <div class="formula-block">
+      <div class="formula-name">Paris Law &amp; mean stress corrections</div>
+      <div class="formula-eq">$$\frac{da}{dN} = C(\Delta K)^m \qquad \Delta K = Y\Delta\sigma\sqrt{\pi a}$$</div>
+      <div class="formula-eq" style="margin-top:8px">$$\text{Goodman: }\sigma_a = \sigma_e\!\left[1-\frac{\sigma_m}{\sigma_u}\right] \qquad \text{Gerber: }\sigma_a = \sigma_e\!\left[1-\left(\frac{\sigma_m}{\sigma_u}\right)^{\!2}\right]$$</div>
+    </div>
+
+    <h2>T7 — Creep</h2>
+    <div class="formula-block">
+      <div class="formula-name">Power Law, Arrhenius, combined</div>
+      <div class="formula-eq">$$\dot{\varepsilon}_s \propto \sigma^n \qquad \dot{\varepsilon}_s \propto e^{-Q_C/RT} \qquad \dot{\varepsilon}_s = A\sigma^n e^{-Q_C/RT}$$</div>
+      <div class="formula-vars">
+        <div class="formula-var"><span class="formula-var-symbol">Q_C</span>from gradient of ln ε̇_s vs 1/T: Q_C = −R × gradient</div>
+        <div class="formula-var"><span class="formula-var-symbol">n</span>from gradient of log ε̇_s vs log σ</div>
+        <div class="formula-var"><span class="formula-var-symbol">T</span>always KELVIN in Arrhenius</div>
+      </div>
+    </div>
+    <div class="formula-block">
+      <div class="formula-name">Diffusional creep</div>
+      <div class="formula-eq">$$\text{Nabarro-Herring: } \dot{\varepsilon} \propto \frac{\sigma}{d^2} \qquad \text{Coble: } \dot{\varepsilon} \propto \frac{\sigma}{d^3}$$</div>
+    </div>
+  </div>
+</section>
+
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<!-- GLOSSARY -->
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section id="glossary" class="section">
+  <div class="container-wide">
+    <h1>Complete Glossary</h1>
+    <p style="margin-bottom:24px;color:var(--text-2)">Search across all 160+ terms instantly. Filter by topic.</p>
+    <div class="glossary-search-wrap">
+      <div class="search-input-wrap">
+        <input type="text" class="search-input" id="glossary-search-input" placeholder="Search any term, definition, or concept..." autocomplete="off">
+        <span class="search-icon">⌕</span>
+      </div>
+      <span id="search-results-count"></span>
+    </div>
+    <button class="fc-open-btn" onclick="showSection('glossary');enterFlashcards()">📇 Flashcard mode</button>
+
+    <div id="fc-session" style="display:none">
+      <div class="fc-config">
+        <div class="fc-config-row">
+          <span class="fc-config-label">Topic</span>
+          <div id="fc-topic-btns" class="fc-topic-btns" style="display:flex;gap:6px;flex-wrap:wrap"></div>
+        </div>
+        <div class="fc-config-row">
+          <span class="fc-config-label">Cards</span>
+          <select id="fc-qty-select" class="fc-qty-select" onchange="applyFcFilters()">
+            <option value="all">All</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="50">50</option>
+          </select>
+          <button class="fc-reshuffle-btn" onclick="applyFcFilters()">🔀 Reshuffle</button>
+          <button class="fc-exit-btn" onclick="exitFlashcards()">← Back to list</button>
+        </div>
+      </div>
+      <div class="fc-viewport" onclick="fcFlip()">
+        <div id="fc-card-inner" class="fc-card-inner">
+          <div class="fc-card-face fc-front">
+            <div id="fc-topic-label" class="fc-topic-label"></div>
+            <div id="fc-term-text" class="fc-term-text"></div>
+            <div class="fc-tap-hint">click · space · enter — reveal definition</div>
+          </div>
+          <div class="fc-card-face fc-back">
+            <div id="fc-back-term" class="fc-back-term"></div>
+            <div id="fc-def-text" class="fc-def-text"></div>
+          </div>
+        </div>
+      </div>
+      <div class="fc-nav-row">
+        <button class="fc-nav-btn" id="fc-prev" onclick="fcPrev()">◀ Prev</button>
+        <span class="fc-counter-display"><span id="fc-pos">1</span> / <span id="fc-total">0</span></span>
+        <button class="fc-nav-btn" id="fc-next" onclick="fcNext()">Next ▶</button>
+      </div>
+      <div class="fc-progress-wrap"><div id="fc-progress-bar"></div></div>
+    </div>
+
+    <div id="fc-list-view">
+    <div class="filter-row">
+      <button class="filter-btn active" data-gfilter="all">All topics</button>
+      <button class="filter-btn" data-gfilter="t1">T1 Stress &amp; Strain</button>
+      <button class="filter-btn" data-gfilter="t2">T2 Deformation</button>
+      <button class="filter-btn" data-gfilter="t3">T3 Dislocations</button>
+      <button class="filter-btn" data-gfilter="t4">T4 Strengthening</button>
+      <button class="filter-btn" data-gfilter="t5">T5 Fracture</button>
+      <button class="filter-btn" data-gfilter="t6">T6 Fatigue</button>
+      <button class="filter-btn" data-gfilter="t7">T7 Creep &amp; SCC</button>
+    </div>
+    <div id="glossary-container"></div>
+    <div id="no-results" style="display:none;text-align:center;padding:60px 20px;color:var(--muted);font-family:'JetBrains Mono',monospace">No terms found — try a different search</div>
+    </div>
+  </div>
+</section>
+
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<!-- MCQ TRAPS -->
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section id="traps" class="section">
+  <div class="container">
+    <h1>MCQ Traps</h1>
+    <p class="hero-subtitle">Plausible-but-wrong claims the exam uses. Read each one. Know what's actually true.</p>
+
+    <h2>Topic 1 — Stress &amp; Strain</h2>
+    <div class="trap-card"><span class="trap-tag">T1 — T1</span><div class="trap-claim">"UTS is the stress at which the material fractures."</div><div class="trap-truth"><strong>FALSE.</strong> UTS is the <strong>maximum engineering stress on the curve — the onset of necking</strong>. After UTS, engineering stress drops because A decreases faster than F, but the material has not fractured yet. Fracture stress (engineering) is lower than UTS.</div></div>
+    <div class="trap-card"><span class="trap-tag">T1 — T2</span><div class="trap-claim">"The 0.2% proof stress is found by offsetting ε = 0.2 on the strain axis."</div><div class="trap-truth"><strong>FALSE.</strong> The offset is <strong>ε = 0.002</strong> (not 0.2). 0.2% strain = 0.002 in decimal form. Draw the line parallel to the elastic slope starting from ε = 0.002.</div></div>
+    <div class="trap-card"><span class="trap-tag">T1 — T3</span><div class="trap-claim">"Stiffness and toughness are the same thing."</div><div class="trap-truth"><strong>FALSE.</strong> Stiffness = Young's modulus E (slope of elastic region). Toughness = energy absorbed before fracture (area under the full stress–strain curve, J/m³). A stiff material is not necessarily tough.</div></div>
+    <div class="trap-card"><span class="trap-tag">T1 — T4</span><div class="trap-claim">"Plastic strain to failure equals total strain to failure."</div><div class="trap-truth"><strong>FALSE.</strong> Plastic strain = total strain − elastic springback. Elastic springback = σ_fracture/E. This is always nonzero, so plastic strain is always less than total strain.</div></div>
+    <div class="trap-card"><span class="trap-tag">T1 — T5</span><div class="trap-claim">"The lateral strain under tensile loading is positive."</div><div class="trap-truth"><strong>FALSE.</strong> Under tensile axial loading, the specimen <strong>contracts laterally</strong> — lateral strain is <strong>negative</strong>. Poisson's ratio is defined as −ε_x/ε_z to make it a positive number.</div></div>
+    <div class="trap-card"><span class="trap-tag">T1 — T6</span><div class="trap-claim">"The load-displacement curve is the same as the stress-strain curve."</div><div class="trap-truth"><strong>FALSE.</strong> The load-displacement curve is geometry-dependent (a thicker bar supports more load). The stress-strain curve is geometry-independent — a material property. Always convert to stress and strain for material comparison.</div></div>
+
+    <h2>Topic 2 &amp; 3 — Deformation &amp; Dislocations</h2>
+    <div class="trap-card"><span class="trap-tag">T2 — T1</span><div class="trap-claim">"φ in Schmid's Law is the angle between the tensile axis and the slip plane."</div><div class="trap-truth"><strong>FALSE.</strong> φ is the angle between the tensile axis and the <strong>slip plane NORMAL</strong>. The slip plane itself is at angle (90° − φ) to the tensile axis. This is the most common Schmid exam error.</div></div>
+    <div class="trap-card"><span class="trap-tag">T2 — T2</span><div class="trap-claim">"The maximum Schmid factor is 1.0."</div><div class="trap-truth"><strong>FALSE.</strong> Maximum Schmid factor is <strong>0.5</strong>, occurring when λ = φ = 45°. τ_max = σ/2, not σ. Exceeding 0.5 is geometrically impossible.</div></div>
+    <div class="trap-card"><span class="trap-tag">T2 — T3</span><div class="trap-claim">"FCC metals have the same slip plane as BCC metals."</div><div class="trap-truth"><strong>FALSE.</strong> FCC slip plane: <strong>{111}</strong>. BCC slip plane: <strong>{110}</strong>. However, both have slip direction ⟨110⟩ (FCC) and ⟨111⟩ (BCC) — these are different too. Don't mix them up.</div></div>
+    <div class="trap-card"><span class="trap-tag">T2 — T4</span><div class="trap-claim">"HCP metals are as ductile as FCC metals."</div><div class="trap-truth"><strong>FALSE.</strong> HCP has only <strong>3 primary slip systems</strong> vs 12 for FCC and BCC. Fewer slip systems = less ability to accommodate arbitrary plastic deformation = lower ductility. Von Mises requires 5 independent systems for general ductility.</div></div>
+    <div class="trap-card"><span class="trap-tag">T3 — T1</span><div class="trap-claim">"Edge dislocations can cross-slip."</div><div class="trap-truth"><strong>FALSE.</strong> Only <strong>screw dislocations</strong> can cross-slip. An edge dislocation's line and Burgers vector together uniquely define a single glide plane — there is no alternative plane to cross-slip onto.</div></div>
+    <div class="trap-card"><span class="trap-tag">T3 — T2</span><div class="trap-claim">"Screw dislocations can climb."</div><div class="trap-truth"><strong>FALSE.</strong> Only <strong>edge dislocations</strong> can climb (non-conservative motion via vacancy diffusion). Screw dislocations have no extra half-plane and no mechanism for climb.</div></div>
+    <div class="trap-card"><span class="trap-tag">T3 — T3</span><div class="trap-claim">"The Frank-Read critical stress uses the grain diameter as l."</div><div class="trap-truth"><strong>FALSE.</strong> l is the length of the <strong>pinned dislocation segment</strong> — NOT the grain diameter. The segment is typically much shorter than the grain. τ_FR = Gb/l, not Gb/(grain diameter).</div></div>
+    <div class="trap-card"><span class="trap-tag">T3 — T4</span><div class="trap-claim">"Work hardening decreases dislocation density."</div><div class="trap-truth"><strong>FALSE.</strong> Work hardening <strong>increases</strong> dislocation density (from ~10¹⁰ to ~10¹⁶ m⁻²). More dislocations impede each other → higher yield stress. Recovery and recrystallisation decrease dislocation density.</div></div>
+    <div class="trap-card"><span class="trap-tag">T3 — T5</span><div class="trap-claim">"Hall-Petch applies at any grain size."</div><div class="trap-truth"><strong>FALSE.</strong> Hall-Petch breaks down below ~10 nm grain size. At nanoscale, <strong>grain boundary sliding</strong> dominates and the relationship inverts — finer grain actually becomes softer (inverse Hall-Petch).</div></div>
+
+    <h2>Topic 4 — Strengthening &amp; Annealing</h2>
+    <div class="trap-card"><span class="trap-tag">T4 — T1</span><div class="trap-claim">"Recovery is the main stage that restores ductility."</div><div class="trap-truth"><strong>FALSE.</strong> <strong>Recrystallisation</strong> is the stage that restores ductility (large increase) and reduces strength (large decrease). Recovery barely changes mechanical properties — it mainly restores thermal and electrical conductivity.</div></div>
+    <div class="trap-card"><span class="trap-tag">T4 — T2</span><div class="trap-claim">"Over-aging increases yield strength."</div><div class="trap-truth"><strong>FALSE.</strong> Over-aging <strong>reduces</strong> yield strength. Precipitates coarsen (Ostwald ripening) → increased inter-particle spacing L → lower Orowan critical stress τ ≈ Gb/L. Peak-aged is the maximum; over-aging moves down from there.</div></div>
+    <div class="trap-card"><span class="trap-tag">T4 — T3</span><div class="trap-claim">"Solid solution strengthening scales linearly with solute concentration."</div><div class="trap-truth"><strong>FALSE.</strong> Solid solution strengthening scales as <strong>c^(1/2)</strong> — square root of concentration. Adding four times as much solute only doubles the strengthening effect.</div></div>
+    <div class="trap-card"><span class="trap-tag">T4 — T4</span><div class="trap-claim">"More cold work raises the recrystallisation temperature."</div><div class="trap-truth"><strong>FALSE.</strong> More cold work <strong>lowers</strong> the recrystallisation temperature. Greater stored energy (more dislocations) makes nucleation easier → recrystallisation starts at lower temperature.</div></div>
+    <div class="trap-card"><span class="trap-tag">T4 — T5</span><div class="trap-claim">"Dispersion-strengthened materials (e.g. SAP) lose strength at high temperature like precipitation-hardened alloys."</div><div class="trap-truth"><strong>FALSE.</strong> Dispersion-strengthened materials use thermally stable particles (Al₂O₃, SiC) that do not dissolve or coarsen at high temperature. Precipitation-hardened alloys lose strength at high T because precipitates dissolve into the matrix.</div></div>
+
+    <h2>Topic 5 — Fracture</h2>
+    <div class="trap-card"><span class="trap-tag">T5 — T1</span><div class="trap-claim">"FCC metals show a ductile-to-brittle transition."</div><div class="trap-truth"><strong>FALSE.</strong> FCC metals (Al, Cu, Ni, austenitic stainless steel) do <strong>NOT</strong> show DBT — they remain ductile at all temperatures. Only BCC and HCP metals show the transition. This is why austenitic SS is used for cryogenic applications.</div></div>
+    <div class="trap-card"><span class="trap-tag">T5 — T2</span><div class="trap-claim">"Charpy impact energy can be used directly in fracture mechanics design calculations."</div><div class="trap-truth"><strong>FALSE.</strong> Charpy data is qualitative — it gives a measure of energy absorption but is geometry-dependent and can't be directly used in design. Use K_IC (fracture toughness) for design calculations.</div></div>
+    <div class="trap-card"><span class="trap-tag">T5 — T3</span><div class="trap-claim">"For a Griffith crack, a is always the half-length of the crack."</div><div class="trap-truth"><strong>FALSE.</strong> Griffith convention: <em>internal crack</em> — a = half-length; <em>edge crack</em> — a = full length from free surface. Using the wrong convention introduces a factor of 2 error in a and √2 error in σ_f.</div></div>
+    <div class="trap-card"><span class="trap-tag">T5 — T4</span><div class="trap-claim">"Increasing grain size lowers the ductile-to-brittle transition temperature."</div><div class="trap-truth"><strong>FALSE.</strong> Larger grains <strong>raise</strong> the transition temperature (worse). This is opposite to the Hall-Petch effect on yield strength. Fine grain → lower T_t (better impact toughness).</div></div>
+    <div class="trap-card"><span class="trap-tag">T5 — T5</span><div class="trap-claim">"Toughness (area under stress-strain curve) and fracture toughness K_IC are the same quantity."</div><div class="trap-truth"><strong>FALSE.</strong> Toughness is energy per unit volume (J/m³) from a tensile test. Fracture toughness K_IC (MPa√m) describes resistance to crack propagation in the presence of a pre-existing flaw. They measure different aspects of material behaviour.</div></div>
+
+    <h2>Topic 6 — Fatigue</h2>
+    <div class="trap-card"><span class="trap-tag">T6 — T1</span><div class="trap-claim">"Beachmarks are produced one per fatigue cycle."</div><div class="trap-truth"><strong>FALSE.</strong> Striations are produced one per cycle. Beachmarks form from loading <strong>interruptions</strong> (machine shut-down, overload) and each beachmark contains thousands of striations.</div></div>
+    <div class="trap-card"><span class="trap-tag">T6 — T2</span><div class="trap-claim">"Stage I fatigue cracks grow perpendicular to the applied stress."</div><div class="trap-truth"><strong>FALSE.</strong> Stage I grows at <strong>45° to the tensile axis</strong> along slip planes. Stage II grows <strong>perpendicular</strong> to the tensile axis. The angles are frequently swapped in exam distractors.</div></div>
+    <div class="trap-card"><span class="trap-tag">T6 — T3</span><div class="trap-claim">"All metals have a true fatigue limit."</div><div class="trap-truth"><strong>FALSE.</strong> Only <strong>ferritic steels</strong> have a true fatigue limit (S-N curve flattens). Aluminium, titanium, copper, and most non-ferrous alloys have no true limit — endurance is quoted at 10⁶–10⁷ cycles.</div></div>
+    <div class="trap-card"><span class="trap-tag">T6 — T4</span><div class="trap-claim">"R = −1 means no loading."</div><div class="trap-truth"><strong>FALSE.</strong> R = −1 means <strong>fully reversed loading</strong> — equal tension and compression, σ_m = 0. R = 0 is zero-to-max (pulsating tension). R = 1 would be constant load with no cycling.</div></div>
+    <div class="trap-card"><span class="trap-tag">T6 — T5</span><div class="trap-claim">"Tensile mean stress improves fatigue life."</div><div class="trap-truth"><strong>FALSE.</strong> Tensile mean stress <strong>reduces</strong> fatigue life (Goodman: σ_a decreases as σ_m increases). Compressive mean stress extends life — this is why shot peening works.</div></div>
+    <div class="trap-card"><span class="trap-tag">T6 — T6</span><div class="trap-claim">"Paris Law applies to all stages of fatigue crack growth."</div><div class="trap-truth"><strong>FALSE.</strong> Paris Law applies to <strong>Stage II only</strong> (stable propagation). It does not apply to Stage I (initiation along slip planes) or Stage III (fast fracture, K ≥ K_IC).</div></div>
+    <div class="trap-card"><span class="trap-tag">T6 — T7</span><div class="trap-claim">"Shot peening works by hardening the surface."</div><div class="trap-truth"><strong>FALSE.</strong> While peening does harden the surface slightly, the key mechanism is introducing a <strong>compressive residual stress layer</strong>. This compressive stress opposes crack opening under tensile fatigue loads, dramatically extending initiation life.</div></div>
+
+    <h2>Topic 7 — Creep &amp; SCC</h2>
+    <div class="trap-card"><span class="trap-tag">T7 — T1</span><div class="trap-claim">"Copper pipes in domestic heating systems are prone to creep."</div><div class="trap-truth"><strong>FALSE.</strong> Copper T_m = 1356 K. At ~80°C (353 K): T/T_m = 0.26 — well below the 0.3–0.4 threshold. No significant creep. Lead (T_m = 600 K) creeps at room temperature (T/T_m = 0.5) — always use Kelvin.</div></div>
+    <div class="trap-card"><span class="trap-tag">T7 — T2</span><div class="trap-claim">"The primary creep stage is the most important for engineering design."</div><div class="trap-truth"><strong>FALSE.</strong> The <strong>secondary (steady-state) creep rate ε̇_s</strong> is the design parameter. Primary is transient and decelerating. Tertiary leads to fracture. Design lifetime is calculated from ε̇_s.</div></div>
+    <div class="trap-card"><span class="trap-tag">T7 — T3</span><div class="trap-claim">"The activation energy Q_C equals R × gradient of the Arrhenius plot."</div><div class="trap-truth"><strong>FALSE.</strong> Q_C = <strong>−R × gradient</strong>. The gradient of ln ε̇_s vs 1/T is negative (creep rate decreases as 1/T increases, i.e. as temperature decreases). The minus sign is critical and is the most common calculation error.</div></div>
+    <div class="trap-card"><span class="trap-tag">T7 — T4</span><div class="trap-claim">"Nabarro-Herring creep dominates at engineering stresses."</div><div class="trap-truth"><strong>FALSE.</strong> At engineering stresses, <strong>dislocation creep (n ≈ 5)</strong> dominates. Nabarro-Herring gives rates 6–7 orders of magnitude below observed at typical stresses. Diffusional creep only dominates at very high temperatures and very low stresses.</div></div>
+    <div class="trap-card"><span class="trap-tag">T7 — T5</span><div class="trap-claim">"SCC only requires a tensile stress and a reactive environment."</div><div class="trap-truth"><strong>FALSE.</strong> SCC requires <strong>all three simultaneously</strong>: tensile stress + reactive environment + <strong>susceptible material</strong>. Austenitic SS is susceptible to Cl⁻ SCC but titanium alloys may not be. Remove any one of the three → SCC stops.</div></div>
+    <div class="trap-card"><span class="trap-tag">T7 — T6</span><div class="trap-claim">"More hydrogen dissolved in steel always makes it more susceptible to hydrogen embrittlement."</div><div class="trap-truth"><strong>FALSE.</strong> HE is worst at <strong>intermediate temperatures near room temperature and at low strain rates</strong>. At very high temperatures, hydrogen diffuses away too fast. The rate of hydrogen transport relative to crack tip movement matters, not simply total hydrogen content.</div></div>
+    <div class="trap-card"><span class="trap-tag">T7 — T7</span><div class="trap-claim">"Coble creep dominates over Nabarro-Herring at all temperatures."</div><div class="trap-truth"><strong>FALSE.</strong> Coble (grain boundary diffusion) dominates at <strong>lower temperatures (0.4–0.7T_m)</strong> and finer grain sizes (ε̇ ∝ 1/d³). Nabarro-Herring (lattice diffusion) dominates at <strong>higher temperatures (>0.7T_m)</strong> and coarser grain sizes (ε̇ ∝ 1/d²).</div></div>
+  </div>
+</section>
+
+</main>
+<script src="js/glossary-data.js"></script>
+<script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script>renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'\\(',right:'\\)',display:false}]});</script>
+</body>
+</html>
