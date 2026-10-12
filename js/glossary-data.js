@@ -205,3 +205,149 @@ const glossaryData = {
     ]
   }
 };
+
+/* Side-by-side comparisons, shown in term previews and expanded glossary entries */
+const glossaryComparisons = [
+  { terms: ["Isotropic", "Anisotropic"],
+    defs: ["", "Properties depend on the direction in which they are measured"],
+    aliases: [["isotropy"], ["anisotropy"]],
+    rows: [
+      ["Properties", "Identical in every direction", "Vary with direction"],
+      ["Uniaxial stress", "ε_x = ε_y (one Poisson's ratio)", "ε_x ≠ ε_y in general"],
+      ["Why", "Random grain orientations average out", "Single crystal, texture or aligned fibres"],
+      ["Examples", "Polycrystalline metals with random grains, glass", "Single crystals, rolled sheet, wood, fibre composites"]
+    ] },
+  { terms: ["Elastic deformation", "Plastic deformation"],
+    rows: [
+      ["Recoverable?", "Yes, fully on unloading", "No, permanent"],
+      ["Mechanism", "Bonds stretch, atoms return", "Dislocation slip, bonds break and reform"],
+      ["Stress range", "Below the yield strength", "Above the yield strength"],
+      ["Governing law", "Hooke's Law, σ = Eε", "Non-linear, with strain hardening"]
+    ] },
+  { terms: ["Engineering stress", "True stress"],
+    defs: ["", "Force divided by the instantaneous cross-sectional area: σ_T = F/Aᵢ"],
+    rows: [
+      ["Area used", "Original area A₀", "Instantaneous area Aᵢ"],
+      ["After necking", "Falls (curve drops after UTS)", "Keeps rising until fracture"],
+      ["Strain partner", "ε = Δl/l₀", "ε_T = ln(lᵢ/l₀)"],
+      ["Used for", "Design, standard test reports", "Describing real material flow behaviour"]
+    ] },
+  { terms: ["Edge dislocation", "Screw dislocation"],
+    rows: [
+      ["Burgers vector vs line", "Perpendicular (b ⊥ line)", "Parallel (b ∥ line)"],
+      ["Moves relative to b", "Parallel to b", "Perpendicular to b"],
+      ["Cross-slip", "Not possible", "Possible"],
+      ["Climb", "Possible (vacancy diffusion)", "Not possible"],
+      ["Energy", "Higher, by factor 1/(1−ν)", "Lower"]
+    ] },
+  { terms: ["Glissile dislocation", "Sessile dislocation"],
+    rows: [
+      ["Mobility", "Can glide on its slip plane", "Cannot glide"],
+      ["Effect", "Carries plastic strain", "Acts as an obstacle, adds hardening"]
+    ] },
+  { terms: ["FCC", "BCC", "HCP"],
+    rows: [
+      ["Slip systems", "12 ({111}⟨110⟩)", "12 ({110}⟨111⟩)", "3 primary"],
+      ["Ductility", "High", "Moderate", "Low"],
+      ["Ductile-to-brittle transition", "No", "Yes", "Sometimes"],
+      ["Examples", "Al, Cu, Ni, austenitic steel", "α-Fe, W, Cr, Mo", "Mg, Zn, Ti"]
+    ] },
+  { terms: ["Ductile fracture", "Brittle fracture"],
+    rows: [
+      ["Plastic deformation", "Extensive, necking first", "Little or none"],
+      ["Crack growth", "Slow, stable, needs rising load", "Fast, unstable"],
+      ["Fracture surface", "Cup and cone, dimples (MVC)", "Flat, shiny, cleavage facets, chevrons"],
+      ["Energy absorbed", "High", "Low"],
+      ["Warning", "Yes, visible deformation", "No, sudden"]
+    ] },
+  { terms: ["Transgranular fracture", "Intergranular fracture"],
+    rows: [
+      ["Crack path", "Through the grains", "Along grain boundaries"],
+      ["Typical cause", "Cleavage on crystal planes", "Weakened boundaries (segregation, precipitates, embrittlement)"],
+      ["Appearance", "Cleavage facets, river markings", "Faceted, 'rock candy' grains"]
+    ] },
+  { terms: ["Stress concentration factor", "Stress intensity factor"],
+    rows: [
+      ["Definition", "K_t = σ_max / σ_nom", "K = Yσ√(πa)"],
+      ["Units", "Dimensionless", "MPa√m"],
+      ["Describes", "Peak stress at a notch or hole", "Severity of the stress field at a crack tip"],
+      ["Failure check", "Compare σ_max with strength", "Fracture when K ≥ K_IC"]
+    ] },
+  { terms: ["Substitutional solid solution", "Interstitial solid solution"],
+    rows: [
+      ["Solute position", "Replaces host atoms on lattice sites", "Sits in gaps between host atoms"],
+      ["Atom size", "Similar (within ~15%, Hume-Rothery)", "Much smaller (C, N, H, B)"],
+      ["Lattice distortion", "Symmetric, weaker strengthening", "Often asymmetric, strong strengthening"],
+      ["Example", "Ni in Cu, Zn in Cu (brass)", "C in Fe (steel)"]
+    ] },
+  { terms: ["Coherent precipitate", "Incoherent precipitate"],
+    rows: [
+      ["Lattice match", "Continuous with the matrix", "Separate lattice, sharp interface"],
+      ["Dislocations", "Cut (shear) through it", "Bypass it by Orowan looping"],
+      ["Ageing stage", "Under-aged to peak-aged", "Over-aged"]
+    ] },
+  { terms: ["Under-aged", "Peak-aged", "Over-aged"],
+    rows: [
+      ["Precipitates", "Small, coherent, few", "Optimum size and spacing", "Coarse, widely spaced, incoherent"],
+      ["Mechanism", "Particle cutting", "Cutting ≈ looping", "Orowan looping"],
+      ["Strength", "Below maximum", "Maximum", "Falls again"]
+    ] },
+  { terms: ["Upper yield point", "Lower yield point"],
+    rows: [
+      ["What it is", "Stress to tear dislocations free of Cottrell atmospheres", "Stress to keep the freed dislocations moving"],
+      ["On the curve", "Sharp peak at first yield", "Flat plateau as Lüders bands spread"]
+    ] },
+  { terms: ["Cold work", "Hot working"],
+    rows: [
+      ["Temperature", "Below recrystallisation", "Above recrystallisation"],
+      ["Strength", "Increases (work hardening)", "No lasting hardening"],
+      ["Ductility", "Reduced", "Retained"],
+      ["Surface and tolerance", "Good finish, tight tolerance", "Oxide scale, looser tolerance"]
+    ] },
+  { terms: ["Recovery", "Recrystallisation", "Grain growth"],
+    rows: [
+      ["What happens", "Dislocations rearrange (polygonisation), internal stress relieved", "New strain-free grains nucleate and grow", "Larger grains consume smaller ones"],
+      ["Strength change", "Slight drop", "Large drop", "Further drop (Hall-Petch)"],
+      ["Driving force", "Stored strain energy", "Stored strain energy", "Grain boundary energy"]
+    ] },
+  { terms: ["Low cycle fatigue", "High cycle fatigue"],
+    rows: [
+      ["Cycles to failure", "Fewer than ~10⁴", "More than ~10⁴"],
+      ["Stress level", "Above yield, plastic strain each cycle", "Below yield, mainly elastic"],
+      ["Described by", "Strain-life", "Stress-life (S-N curve)"]
+    ] },
+  { terms: ["Stage I crack growth", "Stage II crack growth"],
+    rows: [
+      ["Direction", "Along slip planes, ~45° to the load", "Perpendicular to the maximum tensile stress"],
+      ["Extent", "A few grains", "Most of the crack path"],
+      ["Surface features", "Featureless facets", "Striations, beachmarks"]
+    ] },
+  { terms: ["Beachmarks", "Striations"],
+    rows: [
+      ["Scale", "Macroscopic, visible by eye", "Microscopic, needs an SEM"],
+      ["Each mark is", "A period of growth between load changes or stops", "One load cycle"]
+    ] },
+  { terms: ["Goodman criterion", "Gerber criterion"],
+    rows: [
+      ["Shape", "Straight line", "Parabola"],
+      ["Conservatism", "More conservative", "Less conservative, fits ductile data better"]
+    ] },
+  { terms: ["Primary creep", "Secondary creep", "Tertiary creep"],
+    rows: [
+      ["Strain rate", "Decreasing", "Constant (minimum)", "Accelerating"],
+      ["Why", "Work hardening beats recovery", "Hardening balanced by recovery", "Necking, voids, cracks"],
+      ["Design use", "Short transient", "ε̇_min sets creep life", "Leads to rupture"]
+    ] },
+  { terms: ["Nabarro-Herring creep", "Coble creep"],
+    rows: [
+      ["Diffusion path", "Through the grain lattice", "Along grain boundaries"],
+      ["Dominates at", "Higher temperature", "Lower temperature, fine grains"],
+      ["Grain size effect", "Rate ∝ 1/d²", "Rate ∝ 1/d³"],
+      ["Stress dependence", "Linear", "Linear"]
+    ] },
+  { terms: ["Intergranular SCC", "Transgranular SCC"],
+    rows: [
+      ["Crack path", "Along grain boundaries", "Across grains on crystal planes"],
+      ["Cause", "Anodic dissolution of the boundary region", "Environment-assisted cleavage-like cracking"]
+    ] }
+];
